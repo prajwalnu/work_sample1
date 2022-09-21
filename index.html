@@ -25,7 +25,10 @@
  font-family: 'Open Sans',"Helvetica Neue", Helvetica, Arial,"sans-serif";
  font-size: 16px;
  padding: 15px;
- border-bottom: 1px solid black
+ border-bottom: 1px solid black;
+ display: flex;
+ /* justify-content: center; */
+ /* align-items: center; */
  }
  
 
@@ -101,13 +104,52 @@ body {
 }
 
 h1 {
- font-size: 50px;
+ font-size: 40px;
  word-break: break-all;
 }
 #h3{
   position: relative;
   left:16px;
   /* color: red; */
+}
+.logo img{
+  width: 180px;
+  height: 115px;
+
+}
+.client_name{
+  text-align: center;
+}
+.heading{
+  padding: 20px 360px;
+}
+.discription{
+  padding:20px;
+  /* background: linear-gradient(#F1E1DD); */
+  background: #F1E1DD;
+  margin: 0px 0 35px;
+  border-radius: 10px;
+}
+.brand_logos_01{
+  padding: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.image_box{
+  width: 130px;
+  /* height: 100px; */
+}
+.image_box img{
+  width:100%;
+  /* height: 100%; */
+}
+.brand_logos_02{
+  padding: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
 }
 
 .row {
@@ -165,11 +207,30 @@ h1 {
  
   <div id="container">
    <div id="header">
-    <h1>Work samples</h1>
-    Please note, the page may take a minute to load all animations. Thank you for your patience.
- </div>
- 
- <h2>FILTER</h2>
+    <div class="logo">
+      <img src="Annalect.png" width="px" height="auto" position="relative">
+    </div>
+    <div class="heading">
+      <h1>Work samples</h1>
+    </div>    
+    <!-- Please note, the page may take a minute to load all animations. Thank you for your patience. -->
+ </div><br/>
+
+  <div class="discription">
+    <h3 class="client_name">Some of the following major clients I have been working for:</h3><br/>
+    <div class="brand_logos_01">
+      <div class="image_box"><img src="scj.png"></div>
+      <div class="image_box"><img src="h&m.png"></div>
+      <div class="image_box"><img src="lilly.png"></div>
+    </div>
+    <div class="brand_logos_01">
+      <div class="image_box"><img src="h&c.png"></div>
+      <div class="image_box"><img src="skoda.png"></div>
+      <div class="image_box"><img src="vw.png"></div>
+    </div>
+  </div> 
+  <h5>Please note, the page may take a minute to load all animations. Thank you for your patience.</h5><br/>
+ <!-- <h2>FILTER</h2> -->
 <div id="myBtnContainer">
  <!-- <button class="btn active" onclick="filterSelection('all')"> Show all</button> -->
  <button class="btn" onclick="filterSelection('Banner01')">Web Banners</button>
