@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="ad.size" content="width=320,height=50" />
+  <title>US-94056_WAINUA_HCP_Differentiate_HTML_Banner_320x50</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.tinyscrollbar.min.js"></script>
+  <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    * {
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    img {
+      border: none;
+    }
+
+    #blankdiv {
+      width: 320px;
+      height: 50px;
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      background: rgba(255, 255, 255, 0.00);
+    }
+
+    #wrapper1 {
+      position: absolute;
+      width: 318px;
+      height: 48px;
+      background: rgba(255, 255, 255, 0.00);
+      overflow: hidden;
+      border: 1px solid #000000;
+    }
+
+    #wrapper {
+      position: absolute;
+      width: 318px;
+      height: 48px;
+      background: rgba(255, 255, 255, 0.00);
+      overflow: hidden;
+      border: 1px solid #000000;
+      display: none;
+    }
+
+    #bg {
+      background: url(bg.jpg) no-repeat;
+      background-size: contain;
+      width: 450px;
+      height: 50px;
+      position: absolute;
+      top: -1px;
+      left: -68px;
+    }
+
+    #stop_img {
+      background: url(stop.png) no-repeat;
+      background-size: contain;
+      width: 92px;
+      height: 26px;
+      position: absolute;
+      top: 12px;
+      left: 52px;
+      opacity: 0;
+    }
+
+    #para_txt {
+      background: url(para_txt.png) no-repeat;
+      background-size: contain;
+      width: 130px;
+      height: 43px;
+      position: absolute;
+      top: 3px;
+      left: 159px;
+      opacity: 0;
+    }
+
+
+    #frame_txt {
+      background: url(frame_txt.png) no-repeat;
+      background-size: contain;
+      width: 185px;
+      height: 28px;
+      position: absolute;
+      top: 5px;
+      left: 3px;
+      opacity: 0;
+    }
+
+    #footnote {
+      background: url(footnote.png) no-repeat;
+      background-size: contain;
+      width: 138px;
+      height: 5px;
+      position: absolute;
+      top: 35px;
+      left: 3px;
+      opacity: 0;
+    }
+
+    #end_txt {
+      background: url(end_txt.png) no-repeat;
+      background-size: contain;
+      width: 178px;
+      height: 5px;
+      position: absolute;
+      top: 42px;
+      left: 2px;
+      opacity: 0;
+    }
+
+    #logo {
+      background: url(logo.png) no-repeat;
+      background-size: contain;
+      width: 141px;
+      height: 54px;
+      position: absolute;
+      top: -1px;
+      left: 325px;
+    }
+
+    #logo_txt {
+      background: url(wainua_logo.svg) no-repeat;
+      background-size: contain;
+      width: 78px;
+      height: 37px;
+      position: absolute;
+      top: 2px;
+      left: 40px;
+    }
+
+    #az_logo {
+      background: url(az_logo.svg) no-repeat;
+      background-size: contain;
+      width: 55px;
+      height: 12px;
+      position: absolute;
+      top: 35px;
+      left: 322px;
+    }
+
+    #icon {
+      background: url(icon.svg) no-repeat;
+      background-size: contain;
+      width: 22px;
+      height: 7px;
+      position: absolute;
+      top: 40px;
+      left: 322px;
+    }
+
+
+    #exit1 {
+      cursor: pointer;
+      display: inline;
+      text-decoration: none;
+    }
+
+    ul {
+      margin: 0px;
+      padding: 0px;
+      margin-left: -1px;
+    }
+
+    sup {
+      line-height: 0;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrapper1"> </div>
+  <div id="wrapper" onmousedown="return false" onmouseover="return false" onmousemove="return false">
+    <div id="bg"></div>
+    <div id="stop_img"></div>
+    <div id="para_txt"></div>
+    <div id="frame_txt"></div>
+    <div id="footnote"> </div>
+    <div id="end_txt"> </div>
+    <div id="logo">
+      <div id="logo_txt"></div>
+    </div>
+    <div id="icon"></div>
+    <div id="az_logo"></div>
+
+
+    <div id="exit1">
+      <div id="blankdiv"></div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+  <script>
+    function pageLoadedHandler() {
+      setTimeout(function () { $("#wrapper1").css("display", "none"); }, 500);
+      $("#wrapper").css("display", "block");
+
+      TweenLite.to([stop_img, para_txt], 0.5, { delay: 0, opacity: 1 });
+      TweenLite.to([stop_img, para_txt], 0.5, { delay: 2, opacity: 0 });
+      TweenLite.to([bg], 0.5, { delay: 2.5, left: -24 });
+      TweenLite.to([frame_txt, end_txt, footnote], 0.5, { delay: 3, opacity: 1 });
+      TweenLite.to([logo], 0.5, { delay: 3.5, left: 179 });
+      TweenLite.to([icon], 0.5, { delay: 3.5, left: 232 });
+      TweenLite.to([az_logo], 0.5, { delay: 3.5, left: 261 });
+
+      scrollTrap();
+
+    }
+
+    var clickTag1 = 'https://www.wainuahcp.com/efficacy';
+    $("#exit1").bind("click", function () { Enabler.exit(clickTag1); window.open(clickTag1); });
+
+    window.onload = function () {
+      if (Enabler.isPageLoaded()) {
+        pageLoadedHandler();
+      } else {
+        Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED,
+          pageLoadedHandler);
+      }
+    }
+  </script>
+</body>
+
+</html>

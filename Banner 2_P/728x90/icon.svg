@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 8.23 8.07">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #494949;
+        stroke: #00aec9;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" x=".5" y=".5" width="7.23" height="7.07"/>
+    </clipPath>
+  </defs>
+  <g class="cls-3">
+    <g id="Group_18559" data-name="Group 18559">
+      <path id="Path_49072" data-name="Path 49072" class="cls-2" d="M6.68,7.57H.88c-.21,0-.38-.17-.38-.38V1.56c0-.21.17-.38.39-.38h2.3c.21,0,.38.17.38.38,0,.21-.17.38-.38.38h-1.92v4.86h5.02v-1.93c0-.21.17-.39.39-.39.21,0,.39.17.39.39v2.31c0,.21-.17.38-.39.38h0"/>
+      <path id="Path_49073" data-name="Path 49073" class="cls-2" d="M3.66,4.85c-.1,0-.2-.04-.27-.11-.15-.15-.15-.39,0-.54,0,0,0,0,0,0l2.48-2.45c.15-.15.39-.15.55,0,.15.15.15.39,0,.54,0,0,0,0,0,0l-2.48,2.45c-.07.07-.17.11-.27.11"/>
+      <path id="Path_49074" data-name="Path 49074" class="cls-2" d="M7.34,2.94V.88h-2.08l2.08,2.06Z"/>
+      <path id="Path_49075" data-name="Path 49075" class="cls-2" d="M7.34,3.32c-.1,0-.2-.04-.27-.11l-2.08-2.06c-.11-.11-.14-.27-.08-.42.06-.14.2-.24.36-.24h2.08c.21,0,.38.17.39.38h0v2.06c0,.16-.09.29-.24.35-.05.02-.1.03-.15.03M6.19,1.26l.76.75v-.75h-.76Z"/>
+    </g>
+  </g>
+</svg>

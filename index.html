@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Likhitha - Work Samples</title>
+<title>Prajwal - Work Samples</title>
  
  <style media="screen">
  
@@ -13,7 +13,7 @@
  height:20px;
  font-family: 'Open Sans',"Helvetica Neue", Helvetica, Arial,"sans-serif";
  padding: 5px;
- display:block;
+ display:block
  }
 
  #header {
@@ -104,41 +104,50 @@ body {
 }
 
 h1 {
- font-size: 40px;
+ font-size: 45px;
  word-break: break-all;
+}
+
+.client_name{
+    font-size: 25px;
+    margin-bottom: 0px;
 }
 #h3{
   position: relative;
   left:16px;
   /* color: red; */
 }
-.logo img{
-  width: 180px;
-  height: 115px;
+.logo1 img{
+  width: 205px;
+  height: 43px;
+
+}
+
+.logo2 img{
+  width: 247px;
+  height: 144px;
 
 }
 .client_name{
   text-align: center;
 }
-.heading{
-  padding: 20px 360px;
+.heading {
+    padding: 24px 112px;
 }
 .discription{
-  padding:20px;
-  /* background: linear-gradient(#F1E1DD); */
-  background: #F1E1DD;
+  padding:20px 20px 0px 20px;
+  background: linear-gradient(#F1E1DD);
   margin: 0px 0 35px;
   border-radius: 10px;
 }
 .brand_logos_01{
-  padding: 10px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-evenly;
   align-items: center;
 }
 .image_box{
-  width: 130px;
+  width: 205px;
   /* height: 100px; */
 }
 .image_box img{
@@ -152,7 +161,7 @@ h1 {
   justify-content: space-evenly;
 }
 .note{
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .row {
@@ -180,12 +189,33 @@ h1 {
  display: block;
 }/* Style the buttons */
 .btn {
- border: none;
- outline: none;
- padding: 12px 16px;
- background-color: white;
- cursor: pointer;
-}/* Add a grey background color on mouse-over */
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #ffffff;
+    cursor: pointer;
+    width: 20%;
+    margin-left: 52px;
+    margin-top: 27px;
+    font-size: 17px;
+    font-weight: 550;
+}
+
+
+.website_div{
+   font-size: 23px;
+    margin: 28px;
+    color: #285560;
+}
+
+.website_url {
+    font-size: 20px;
+    margin: -8px 28px 28px 28px;
+    color: #285560;
+}
+
+
+/* Add a grey background color on mouse-over */
 .btn:hover {
  background-color: #ddd;
 }/* Add a dark background color to the active button */
@@ -210,9 +240,14 @@ h1 {
  
   <div id="container">
    <div id="header">
-    <div class="logo">
-      <img src="Annalect.png" width="px" height="auto" position="relative">
+    <div class="logo1" style="position: relative; top: 45px;">
+      <img src="./Indegene_Logo_png.png" width="px" height="auto" position="relative">
     </div>
+
+    <div class="logo2" style="position: relative; top: -8px;">
+      <img src="./Publicis_Global_Delivery.png" width="px" height="auto" position="relative">
+    </div>
+
     <div class="heading">
       <h1>Work samples</h1>
     </div>    
@@ -222,21 +257,21 @@ h1 {
   <div class="discription">
     <h3 class="client_name">Some of the following major clients I have been working for:</h3><br/>
     <div class="brand_logos_01">
-      <div class="image_box"><img src="scj.png"></div>
-      <div class="image_box"><img src="h&m.png"></div>
-      <div class="image_box"><img src="lilly.png"></div>
-      <div class="image_box"><img src="h&c.png"></div>
-      <div class="image_box"><img src="skoda.png"></div>
-      <div class="image_box"><img src="vw.png"></div>
+      <div class="image_box"><img src="./astrazeneca-PNG-logo.png"></div>
+      <div class="image_box"><img src="./amgen.png"></div>
+      <div class="image_box"><img src="./Boehringer Ingelheim_Logo.png"></div>
+      <div class="image_box"><img src="./Jhnson_logo.png"></div>
+      <div class="image_box"><img src="./Pfizer.png"></div>
     </div>
   </div> 
   <p class="note">Please note, the page may take a minute to load all animations. Thank you for your patience.</p>
  <!-- <h2>FILTER</h2> -->
 <div id="myBtnContainer">
  <!-- <button class="btn active" onclick="filterSelection('all')"> Show all</button> -->
- <button class="btn" onclick="filterSelection('Banner01')">Web Banners</button>
- <button class="btn" onclick="filterSelection('Emailers')"> Emailers</button>
- <button class="btn" onclick="filterSelection('SocialMedia')"> Social Media Templates</button>
+ <button class="btn" style="margin-left: 0px;" onclick="filterSelection('Banner01')">WEB BANNERS</button>
+ <button class="btn" onclick="filterSelection('Emailers')"> EMAILERS</button>
+ <button class="btn" onclick="filterSelection('SocialMedia')"> SOCIAL MEDIA TEMPLATES</button>
+ <button class="btn" onclick="filterSelection('Websites')">WEBSITES</button>
  
  
 </div>
@@ -244,21 +279,18 @@ h1 {
 <div class="row">
   <hr style="width:100%;text-align:left;margin-left:0" class="bannerCard column Banner01">
 
-  <div class="bannerCard column Banner01"> <iframe src="Banner_SCJ_1/300x250/index.html" width=" 300" height=" 250" frameborder="0" scrolling="no"></iframe> </div>
 
-  <div class="bannerCard column Banner01"> <iframe src="Banner_SCJ_2/300x250/index.html" width=" 300" height=" 250" frameborder="0" scrolling="no"></iframe> </div>
-
-  <div class="bannerCard column Banner01"> <iframe src="Banner_03/300x250/index.html" width=" 300" height=" 250" frameborder="0" scrolling="no"></iframe> </div>
+  <div class="bannerCard column Banner01"> <iframe src="Banner 1_P/300x250/index.html" width=" 300" height=" 250" frameborder="0" scrolling="no"></iframe> </div>
 
   <div class="bannerCard column Banner01"> <iframe src="Banner_04/300x250/index.html" width=" 300" height=" 250" frameborder="0" scrolling="no"></iframe> </div>
 
-  <div class="bannerCard column Banner01"> <iframe src="Banner_05/300x250/index.html" width=" 300" height=" 250" frameborder="0" scrolling="no"></iframe> </div>
+  <div class="bannerCard column Banner01"> <iframe src="Banner 2_P/300x250/index.html" width=" 300" height=" 250" frameborder="0" scrolling="no"></iframe> </div>
 
-  <div class="bannerCard column Banner01"> <iframe src="Banner_06/300x250/index.html" width=" 300" height=" 250" frameborder="0" scrolling="no"></iframe> </div>
+  <div class="bannerCard column Banner01"> <iframe src="Banner 3_P/300x250/index.html" width=" 300" height=" 250" frameborder="0" scrolling="no"></iframe> </div>
 
   <div class="bannerCard column Banner01"> <iframe src="Banner_07/300x250/index.html" width=" 300" height=" 250" frameborder="0" scrolling="no"></iframe> </div>
 
-  <div class="bannerCard column Banner01"> <iframe src="Banner_08/300x250/index.html" width=" 300" height=" 250" frameborder="0" scrolling="no"></iframe> </div>
+  <div class="bannerCard column Banner01"> <iframe src="Banner 4_P/300x250/index.html" width=" 300" height=" 250" frameborder="0" scrolling="no"></iframe> </div>
 
 
 </div>
@@ -266,24 +298,20 @@ h1 {
       <hr style="width:100%;text-align:left;margin-left:0" class="bannerCard column Banner01">
 
 
-      <div class="bannerCard column Banner01"> <iframe src="Banner_SCJ_1/160x600/index.html" width=" 160" height=" 600" frameborder="0" scrolling="no"></iframe></div>
+      <div class="bannerCard column Banner01"> <iframe src="Banner 1_P/160x600/index.html" width=" 160" height=" 600" frameborder="0" scrolling="no"></iframe></div>
       <div class="bannerCard column Banner01"> <iframe src="Banner_SCJ_2/160x600/index.html" width=" 160" height=" 600" frameborder="0" scrolling="no"></iframe></div>
-      <div class="bannerCard column Banner01"> <iframe src="Banner_03/160x600/index.html" width=" 160" height=" 600" frameborder="0" scrolling="no"></iframe></div>
-      <div class="bannerCard column Banner01"> <iframe src="Banner_04/160x600/index.html" width=" 160" height=" 600" frameborder="0" scrolling="no"></iframe></div>
-      <div class="bannerCard column Banner01"> <iframe src="Banner_05/160x600/index.html" width=" 160" height=" 600" frameborder="0" scrolling="no"></iframe></div>
+      <div class="bannerCard column Banner01"> <iframe src="Banner 2_P/160x600/index.html" width=" 160" height=" 600" frameborder="0" scrolling="no"></iframe></div>
+      <div class="bannerCard column Banner01"> <iframe src="Banner 3_P/160x600/index.html" width=" 160" height=" 600" frameborder="0" scrolling="no"></iframe></div>
       <div class="bannerCard column Banner01"> <iframe src="Banner_06/160x600/index.html" width=" 160" height=" 600" frameborder="0" scrolling="no"></iframe></div>
       <div class="bannerCard column Banner01"> <iframe src="Banner_07/160x600/index.html" width=" 160" height=" 600" frameborder="0" scrolling="no"></iframe></div>
  
     </div>
     <div class="row">
       <hr style="width:100%;text-align:left;margin-left:0" class="bannerCard column Banner01">
-      <div class="bannerCard column Banner01"> <iframe src="Banner_SCJ_1/300x600/index.html" width=" 300" height=" 600" frameborder="0" scrolling="no"></iframe></div>
-      <div class="bannerCard column Banner01"> <iframe src="Banner_SCJ_2/300x600/index.html" width=" 300" height=" 600" frameborder="0" scrolling="no"></iframe></div>
-      <div class="bannerCard column Banner01"> <iframe src="Banner_04/300x600/index.html" width=" 300" height=" 600" frameborder="0" scrolling="no"></iframe></div>
+      <div class="bannerCard column Banner01"> <iframe src="Banner 1_P/300x600/index.html" width=" 300" height=" 600" frameborder="0" scrolling="no"></iframe></div>
+      <div class="bannerCard column Banner01"> <iframe src="Banner 2_P/300x600/index.html" width=" 300" height=" 600" frameborder="0" scrolling="no"></iframe></div>
+      <div class="bannerCard column Banner01"> <iframe src="Banner 3_P/300x600/index.html" width=" 300" height=" 600" frameborder="0" scrolling="no"></iframe></div>
       <div class="bannerCard column Banner01"> <iframe src="Banner_05/300x600/index.html" width=" 300" height=" 600" frameborder="0" scrolling="no"></iframe></div>
-      <div class="bannerCard column Banner01"> <iframe src="Banner_06/300x600/index.html" width=" 300" height=" 600" frameborder="0" scrolling="no"></iframe></div>
-      <div class="bannerCard column Banner01"> <iframe src="Banner_07/300x600/index.html" width=" 300" height=" 600" frameborder="0" scrolling="no"></iframe></div>
-      <div class="bannerCard column Banner01"> <iframe src="Banner_08/300x600/index.html" width=" 300" height=" 600" frameborder="0" scrolling="no"></iframe></div>
   
     </div>
 
@@ -294,28 +322,43 @@ h1 {
 
       <div class="bannerCard column Banner01"> <iframe src="Banner_SCJ_2/320x50/index.html" width=" 320" height="50" frameborder="0" scrolling="no"></iframe> </div>
 
-        <div class="bannerCard column Banner01"> <iframe src="Banner_SCJ_1/728x90/index.html" width=" 728" height="90" frameborder="0" scrolling="no"></iframe>  </div>
+      <div class="bannerCard column Banner01"> <iframe src="Banner 1_P/320x50/index.html" width=" 320" height="50" frameborder="0" scrolling="no"></iframe> </div>
 
-        <div class="bannerCard column Banner01"> <iframe src="Banner_SCJ_2/728x90/index.html" width=" 728" height="90" frameborder="0" scrolling="no"></iframe>  </div>
+        <div class="bannerCard column Banner01"> <iframe src="Banner 1_P/728x90/index.html" width=" 728" height="90" frameborder="0" scrolling="no"></iframe>  </div>
 
-        <div class="bannerCard column Banner01"> <iframe src="Banner_03/728x90/index.html" width=" 728" height="90" frameborder="0" scrolling="no"></iframe>  </div>
+        <div class="bannerCard column Banner01"> <iframe src="Banner 2_P/728x90/index.html" width=" 728" height="90" frameborder="0" scrolling="no"></iframe>  </div>
+
+        <div class="bannerCard column Banner01"> <iframe src="Banner 3_P/728x90/index.html" width=" 728" height="90" frameborder="0" scrolling="no"></iframe>  </div>
 
 
         <div class="bannerCard column Banner01"> <iframe src="Banner_04/728x90/index.html" width=" 728" height="90" frameborder="0" scrolling="no"></iframe> </div>
 
-        <div class="bannerCard column Banner01"> <iframe src="Banner_05/728x90/index.html" width=" 728" height="90" frameborder="0" scrolling="no"></iframe> </div>
-
-        <div class="bannerCard column Banner01"> <iframe src="Banner_06/728x90/index.html" width=" 728" height="90" frameborder="0" scrolling="no"></iframe> </div>
-
-        <div class="bannerCard column Banner01"> <iframe src="Banner_07/728x90/index.html" width=" 728" height="90" frameborder="0" scrolling="no"></iframe> </div>
+        
   
-        <div class="bannerCard column Banner01"> <iframe src="Banner_04/970x250/index.html" width=" 970" height="250" frameborder="0" scrolling="no"></iframe>  </div>
-        <div class="bannerCard column Banner01"> <iframe src="Banner_05/970x250/index.html" width=" 970" height="250" frameborder="0" scrolling="no"></iframe>  </div>
+        <div class="bannerCard column Banner01"> <iframe src="Banner 2_P/970x250/index.html" width=" 970" height="250" frameborder="0" scrolling="no"></iframe>  </div>
+  
 
         <div class="bannerCard column Banner01"> <iframe src="Facebook_Post/Dotcom/1000x298/index.html" width="1000" height="298" frameborder="0" scrolling="no"></iframe>  </div>
 
     
     </div>
+
+    <div class="row">
+      <hr style="width:100%;text-align:left;margin-left:0" class="bannerCard column Emailers">
+
+      <div class="bannerCard column Emailers"> <iframe src="Email/Pfizer email 2/RTE Australia 2/RTE.html" width=" 640" height="1700" frameborder="0" scrolling="no"></iframe></div>
+
+      <div class="bannerCard column Emailers"> <iframe src="Email/Pfizer email/Email.html" width=" 640" height="1950" frameborder="0" scrolling="no"></iframe></div>
+
+      <div class="bannerCard column Emailers"> <iframe src="Email/email/index.html" width=" 640" height="3150" frameborder="0" scrolling="no"></iframe></div>
+
+            <div class="bannerCard column Emailers"> <iframe src="Email/J&J/index.html" width=" 640" height="4150" frameborder="0" scrolling="no"></iframe></div>
+ 
+  </div>
+
+
+
+
     <div class="row">
       <hr style="width:100%;text-align:left;margin-left:0" class="bannerCard column SocialMedia">
 
@@ -327,16 +370,7 @@ h1 {
 
       <div class="bannerCard column SocialMedia"> <iframe src="Facebook_Post/VW_Post/index.html" width="320" height="540" frameborder="0" scrolling="no"></iframe></div>
 
-      <div class="bannerCard column SocialMedia"> <iframe src="Facebook_Post/Facebook_Carousel/index.html" width="320" height="540" frameborder="0" scrolling="no"></iframe> </div>
-
-      <div class="bannerCard column SocialMedia"> <iframe src="Facebook_Post/Social_Banners/index.html" width="320" height="540" frameborder="0" scrolling="no"></iframe></div>
-
-
-      <div class="bannerCard column SocialMedia"> <iframe src="Facebook_Post/Ecomm/index.html" width="375" height="450" frameborder="0" scrolling="no"></iframe> </div>
-
-      <div class="bannerCard column SocialMedia"> <iframe src="Facebook_Post/Facebook_Story/kodiaq.jpg" width="320" height="570" frameborder="0" scrolling="no"></iframe></div>
-
-      <div class="bannerCard column SocialMedia"> <iframe src="Facebook_Post/Facebook_Story/ID4.jpg" width="310" height="540" frameborder="0" scrolling="no"></iframe></div>
+    
 
 
 
@@ -347,14 +381,43 @@ h1 {
     
     </div>
 
+
     <div class="row">
-      <hr style="width:100%;text-align:left;margin-left:0" class="bannerCard column Emailers">
+      <hr style="width:100%;text-align:left;margin-left:0;margin-bottom: 35px; float: none;" class="bannerCard column Websites">
 
-      <div class="bannerCard column Emailers"> <iframe src="Email/SCJ/index.html" width=" 640" height="1250" frameborder="0" scrolling="no"></iframe></div>
+      <div class="Websites website_div column" style="float: none;" >Act4Diabetes - Boehringer Ingelheim
+      </div>
 
-      <div class="bannerCard column Emailers"> <iframe src="Email/Ford/index.html" width=" 640" height="5500" frameborder="0" scrolling="no"></iframe></div>
- 
-  </div>
+      <div class="Websites website_url column" style="float: none;" >
+        URL: <a href="https://www.act4diabetes.com/" target="_blank">https://www.act4diabetes.com/</a>
+      </div>
+
+      <div style="height: 5px;">&nbsp;</div>
+
+
+      <div class="Websites website_div column" style="float: none;">Generalized pustular psoriasis (GPP) - Boehringer Ingelheim
+      </div>
+
+      <div class="Websites website_url column" style="float: none;">
+        URL: <a href="https://www.boehringer-ingelheim.com/human-health/skin-and-inflammatory-diseases/gpp" target="_blank">https://www.boehringer-ingelheim.com/human-health/skin-and-inflammatory-diseases/gpp</a>
+      </div>
+
+      <div style="height: 5px;">&nbsp;</div>
+
+
+      <div class="Websites website_div column" style="float: none;">Boehringer Ingelheim Portal for HealthCare Professionals
+      </div>
+
+      <div class="Websites website_url column" style="float: none;">
+        URL: <a href="https://pro.boehringer-ingelheim.com/" target="_blank">https://pro.boehringer-ingelheim.com/</a>
+      </div>
+
+
+    
+    
+    </div>
+
+    
     
    </div> 
     

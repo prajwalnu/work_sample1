@@ -1,0 +1,648 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<!-- utf-8 works for most cases -->
+	<meta name="viewport" content="width=device-width">
+	<!-- Forcing initial-scale shouldn't be necessary -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title> RTE </title>
+	<!--[if mso | ie]>
+<style>
+.sup {
+vertical-align: 1px !important;
+font-size: 100% !important;
+}
+</style>
+<![endif]-->
+	<!--[if ie]>
+<style>
+.sup {
+vertical-align: 6px !important;
+font-size: 60% !important;
+}
+</style>
+<![endif]-->
+	<style type="text/css">
+		*,
+		body,
+		img {
+			padding: 0;
+			margin: 0;
+		}
+
+		body {
+			background-color: #fff;
+		}
+
+		/* What it does: Remove spaces around the email design added by some email clients. */
+		/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+		html,
+		body {
+			font-size: 16px;
+			margin: 0;
+			padding: 0;
+			height: 100% !important;
+			width: 100% !important;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		/* What it does: Stops email clients resizing small text. */
+		* {
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%;
+		}
+
+		/* What it does: Stops Outlook from adding extra spacing to tables. */
+		table,
+		td {
+			mso-table-lspace: 0pt;
+			mso-table-rspace: 0pt;
+		}
+
+		/* What it does: Fixes webkit padding issue. */
+		table {
+			border-spacing: 0 !important;
+		}
+
+		/* What it does: Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+		table {
+			border-collapse: collapse;
+			margin: 0 auto;
+		}
+
+		/* What it does: Uses a better rendering method when resizing images in IE. */
+		img {
+			-ms-interpolation-mode: bicubic;
+		}
+
+		/* What it does: Overrides styles added images. */
+		img {
+			border: 0 !important;
+			outline: none !important;
+			text-decoration: none !important;
+		}
+
+		td u {
+			color: #454545;
+		}
+
+		#main_table {
+			width: 600px !important;
+			margin: 0 auto;
+		}
+
+		a {
+			color: black;
+		}
+
+		.mob_hide {
+			display: none;
+		}
+
+		a,
+		a:focus,
+		a:active,
+		img:focus,
+		img:active,
+		img {
+			outline: none;
+			text-decoration: none;
+			border: 0px;
+			margin: 0px;
+			padding: 0px;
+		}
+
+		@media only screen and (max-width: 550px) {
+			#main_table {
+				width: 320px !important;
+				margin: 0 auto;
+			}
+
+			.container {
+				width: 100% !important;
+				min-width: 100% !important;
+				max-width: 100% !important;
+			}
+
+			.main {
+				width: 320px !important;
+			}
+
+			.inlineBreak {
+				display: block;
+			}
+
+			.mobView {
+				width: 100% !important;
+				display: block;
+			}
+
+			.mobView_1 {
+				width: 100% !important;
+				display: block;
+			}
+
+			.userPhoto {
+				text-align: center !important
+			}
+
+			.center {
+				text-align: center !important
+			}
+
+			.mobView tr td {
+				text-align: center !important
+			}
+
+			.mobView_1 tr td {
+				text-align: center !important
+			}
+
+			.textcenter {
+				text-align: center !important
+			}
+
+			.viewMob1 {
+				width: 100% !important;
+				display: block !important
+			}
+            .viewMob12{
+                width: 100% !important;
+				display: block !important;
+                margin: 0 auto;
+                padding: 0px 0px 0px 0px !important;
+
+            }
+
+			.viewMob2 {
+				width: 320px !important;
+			}
+
+			.bannerclass {
+				width: 100%;
+			}
+
+			.mob_t {
+				padding-top: 6px !important;
+				padding-left: 10px !important;
+				padding-right: 3px !important;
+			}
+
+			.mob_bulet {
+				padding-left: 2px !important;
+			}
+
+			.mob_bulet1 {
+				padding-left: 5px !important;
+			}
+
+			.mobpad {
+				padding-left: 10px !important;
+				padding-right: 10px !important
+			}
+
+			.for_mobile_biew {
+				text-align: center !important;
+				display: block !important;
+				margin: 0 auto !important;
+				padding-top: 10px;
+			}
+
+			.for_mobile_biew1 {
+				text-align: left !important;
+				display: block !important;
+				width: 100%
+			}
+
+			.for_mobile_one {
+				width: 100%;
+				display: block !important;
+			}
+
+			.padding_bottm {
+				padding-top: 10px !important;
+			}
+
+			.padding {
+				padding-top: 15px !important;
+			}
+
+			.viewMob3 {
+				width: 100% !important;
+				display: block !important;
+				padding-top: 10px !important;
+				text-align: left !important;
+			}
+
+			.viewMob11 {
+				width: 100% !important;
+				display: block !important;
+				text-align: center !important
+			}
+
+			.mobpad_right {
+				padding-right: 0px;
+			}
+
+			.mob_View {
+				width: 100% !important;
+				display: block;
+			}
+
+			.for_molb {
+				width: 6% !important
+			}
+
+			.for_molb1 {
+				width: 10% !important
+			}
+
+			.vl_top {
+				vertical-align: top !important;
+			}
+
+			.pbt_10 {
+				padding-bottom: 10px !important;
+			}
+
+			.mo_pad_remove {
+				padding: 0px 10px !important;
+			}
+
+			.pad_LR {
+				padding: 40px 10px !important;
+			}
+
+			.pad_LR_mob {
+				padding: 20px 0px !important;
+			}
+
+			.center_mobile {}
+
+			.mob_font {
+				font-size: 20px !important;
+				line-height: 18px;
+			}
+
+			.mob_supfont {
+				font-size: 12px !important;
+			}
+		}
+	</style>
+
+</head>
+
+<body>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#fff;">
+		<tr>
+			<td>
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td>
+							<!--[if (gte mso 9)]>
+<table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td> 
+<![endif]-->
+
+							<table width="600" border="0" cellspacing="0" cellpadding="0" id="main_table" align="center"
+								style="max-width:600px; margin:auto; table-layout: fixed; vertical-align:top; background-color:#fff">
+								<!--IBrance - RTE Paloma 2 Header-->
+
+								<tr>
+
+									<td width="100%" align="left" valign="top"
+										style="padding:0px 0px; background-color: #ffffff;" class="">
+
+										<table width="100%" border="0" cellpadding="0" cellspacing="0">
+											<tr>
+												<td align="left" valign="top"><a href="#"
+														style="pointer-events: none; cursor:none;"><img alt="img1"
+															src="images/header.jpg" width="600" class="viewMob2"></a>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+
+                                <tr>
+
+									<td width="100%" align="left" valign="top" style="padding:0px 45px 0px 45px;"
+										class="mo_pad_remove">
+
+										<table width="100%" cellpadding="0" cellspacing="0">
+											<tr>
+												<td align="left" width="100%"
+													style="color:#000000; padding:40px 0px 0px 0px; font-family:Arial;font-size:15px; line-height: 17px;vertical-align:top;word-break: break-word;">
+													<span style="color:#000000; ">
+														Dear {{customText(30)}},</span></td>
+											</tr>
+
+                                            <tr>
+												<td align="left" width="100%"
+													style="color:#000000; padding:18px 0px 0px 0px; font-family:Arial;font-size:15px; line-height: 17px;vertical-align:top;word-break: break-word;">
+													<span style="color:#000000; ">
+														{{customText(225)}},</span></td>
+											</tr>
+
+                                            <tr>
+												<td align="left" width="100%"
+													style="color:#000000; padding:18px 0px 0px 0px; font-family:Arial;font-size:15px; line-height: 17px;vertical-align:top;word-break: break-word;">
+													<span style="color:#000000; ">
+														This is a personalised message from {25 characters}</span></td>
+											</tr>
+
+                                            <tr>
+												<td align="left" width="100%"
+													style="color:#000000; padding:15px 0px 0px 0px; font-family:Arial;font-size:15px; line-height: 17px;vertical-align:top;text-align: left;">
+													<span style="color:#000000; ">
+														There is a real need for more effective, less toxic treatment options for your patients with AML.<sup style="line-height: 0px; font-size: 65%;">1</sup> The ALFA-0701 Phase III clinical trial was designed to test an optimal dosing regimen for MYLOTARG (gemtuzumab ozogamicin) to minimise toxicity.<sup style="line-height: 0px; font-size: 65%;">2</sup></span></td>
+											</tr>
+
+                                            <tr>
+												<td align="left" width="100%"
+													style="color:#000000; padding:18px 0px 45px 0px; font-family:Arial;font-size:15px; line-height: 17px;vertical-align:top;text-align: left;">
+													<span style="color:#000000; ">
+														We've developed a series of videos to help you better understand the <br>ALFA-0701 clinical trial and the optimal dosing regimen for MYLOTARG. </span></td>
+											</tr>
+                                        </table>
+									</td>
+								</tr>
+
+
+                                <tr>
+                                    <td width="100%" align="center" bgcolor="#dcf2f2">
+                                        <table width="100%" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="8%" valign="top" align="left" class="viewMob1"></td>
+
+                                                <td align="left" valign="top" width="32%" class="viewMob1" style="padding: 26px 0px 26px 0px;"> <a href="#" style="pointer-events: none; cursor:none;"><img alt="body_1" src="images/body_1.jpg" width="188" class="viewMob1"></a>
+                                        </td>
+                                        
+                                        <td align="left" width="100%" class="viewMob1">
+                                            <table width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td align="left" valign="top" width="60%" style="color:#000000; padding:0px 0px 0px 24px; font-family:Arial;font-size:15px; line-height: 17px;vertical-align:top;text-align: left;">
+                                            <span style="color:#000000; ">Here about the rationale for and results <br> from ALFA-0701</span>
+                                            </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td width="100%" align="center" style="padding: 15px 0px 0px 24px;">
+                                                    <table align="left" border="0" cellpadding="0" cellspacing="0" width="140" style="width: 140px;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td align="center" valign="middle" bgcolor="#D9252D" style="color:#ffffff;font-family:Arial;font-size:15px;text-align:center;  vertical-align: middle; background: #d9252d;height: 38px;font-weight: 600">
+                                                                    <a href="#" target="_blank" style="text-decoration: none; outline: none; border: none; display: block; color: #ffffff;line-height: 37px;font-weight: 600">
+                                                                                                                            Watch Now
+                                                                                                                            </a>
+                                                                                                                        </td>
+                                                                                                                    </tr>
+                                                                                                                </tbody>
+                                                                                                            </table>
+                                                                                                        </td>
+                                                                                                    </tr>
+
+                                                       </table>
+                                                       </td>
+                                                       </tr>
+                                                       </table>
+                                                       </td>
+                                                       </tr>
+                                                       
+                                                       <tr>
+                                                           <td width="100%" valign="top" align="left" style="height: 20px;"></td>
+                                                       </tr>
+
+                                                       <tr>
+                                                        <td width="100%" align="center" bgcolor="#dcf2f2">
+                                                            <table width="100%" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td width="8%" valign="top" align="left" class="viewMob1"></td>
+
+                                                                    <td align="left" valign="top" width="32%" class="viewMob1" style="padding: 26px 0px 26px 0px;"> <a href="#" style="pointer-events: none; cursor:none;"><img alt="body_2" src="images/body_2.jpg" width="188" class="viewMob1"></a>
+                                                            </td>
+                                                            
+                                                            <td align="left" width="100%" class="viewMob1">
+                                                                <table width="100%" cellpadding="0" cellspacing="0">
+                                                                    <tr>
+                                                                        <td align="left" valign="top" width="60%" style="color:#000000; padding:0px 0px 0px 24px; font-family:Arial;font-size:15px; line-height: 17px;vertical-align:top;text-align: left;">
+                                                                <span style="color:#000000; ">Administering MYLOTARG</span>
+                                                                </td>
+                                                                </tr>
+                    
+                                                                <tr>
+                                                                    <td width="100%" align="center" style="padding: 15px 0px 0px 24px;">
+                                                                        <table align="left" border="0" cellpadding="0" cellspacing="0" width="140" style="width: 140px;">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="center" valign="middle" bgcolor="#D9252D" style="color:#ffffff;font-family:Arial;font-size:15px;text-align:center;  vertical-align: middle; background: #d9252d;height: 38px;font-weight: 600">
+                                                                                        <a href="#" target="_blank" style="text-decoration: none; outline: none; border: none; display: block; color: #ffffff;line-height: 37px;font-weight: 600">
+                                                                                                                                                Watch Now
+                                                                                                                                                </a>
+                                                                                                                                            </td>
+                                                                                                                                        </tr>
+                                                                                                                                    </tbody>
+                                                                                                                                </table>
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                    
+                                                                           </table>
+                                                                           </td>
+                                                                           </tr>
+                                                                           </table>
+                                                                           </td>
+                                                                           </tr>
+
+                                                                           <tr>
+                                                                            <td width="100%" align="left" valign="top" style="padding:0px 45px 0px 45px;"
+                                                                                    class="mo_pad_remove">
+                                            
+                                                                                    <table width="100%" cellpadding="0" cellspacing="0">
+                                            
+                                                                                        <tr>
+                                                                                            <td align="left" valign="top" width="100%"
+                                                                                                style="color:#000000; padding: 46px 0px 0px 0px; font-family:Arial;font-size:15px; line-height: 17px;vertical-align:top;">
+                                                                                                If you have any questions, or would like to talk further about the role that MYLOTARG can play for select AML patients, please do not hesitate to contact me..</td>
+                                                                                        </tr>
+
+                                                                                        <tr>
+                                                                                            <td align="left" valign="top" width="100%"
+                                                                                                style="color:#000000; padding: 30px 0px 0px 0px; font-family:Arial;font-size:15px; line-height: 17px;vertical-align:top;">
+                                                                                                Kind regards</td>
+                                                                                        </tr>
+
+                                                                                        <tr>
+                                                                                            <td align="left" valign="top" width="100%"
+                                                                                                style="color:#000000; padding: 30px 0px 0px 0px; font-family:Arial;font-size:15px; line-height: 17px;vertical-align:top;">
+                                                                                                {{Rep name}} </td>
+                                                                                        </tr>
+
+                                                                                        <tr>
+                                                                                            <td align="left" valign="top" width="100%"
+                                                                                                style="color:#000000; padding: 10px 0px 0px 0px; font-family:Arial;font-size:15px; line-height: 17px;vertical-align:top;">
+                                                                                                {{Title}} </td>
+                                                                                        </tr>
+
+                                                                                        <tr>
+                                                                                            <td align="left" valign="top" width="100%"
+                                                                                                style="color:#000000; padding: 10px 0px 0px 0px; font-family:Arial;font-size:15px; line-height: 17px;vertical-align:top;">
+                                                                                                {{Email}} </td>
+                                                                                        </tr>
+
+                                                                                        <tr>
+                                                                                            <td align="left" valign="top" width="100%"
+                                                                                                style="color:#000000; padding: 10px 0px 40px 0px; font-family:Arial;font-size:15px; line-height: 17px;vertical-align:top; border-bottom: 2px solid #d82129;">
+                                                                                                {{Phone}} </td>
+                                                                                        </tr>
+
+                                                                                        <tr>
+                                                                                            <td align="justify" valign="top" width="100%"
+                                                                                                style="color:#000000; padding: 40px 0px 0px 0px; font-family:Arial;font-size:12px; line-height: 15px;vertical-align:top;">
+                                                                                                <strong>Abbreviations:</strong> AML, acute myeloid leukaemia</td>
+                                                                                        </tr>
+
+                                                                                        <tr>
+                                                                                            <td align="justify" valign="top" width="100%"
+                                                                                                style="color:#000000; padding: 15px 0px 20px 0px; font-family:Arial;font-size:12px; line-height: 15px;vertical-align:top;">
+                                                                                                <strong>Reference: 1.</strong> Wiese M, Daver A. Am J Manag Care. <a href="#" style="color: #000000 ; text-decoration: none;pointer-events: none;cursor:none;">2018;24:S347-S355.</a> 2. Castaigne S, et al. Lancet <a href="#" style="color: #000000 ; text-decoration: none;pointer-events: none;cursor:none;">2012;379:1508-1516.</a></td>
+                                                                                        </tr>
+
+                                                                                        <tr>
+                                                                                            <td width="100%" align="left" valign="top"
+                                                                                                    style="padding:0px 0px 0px 0px; border: 1px solid #1b1b1b;"
+                                                                                                    class="">
+                                                
+                                                                                                    <table width="100%" cellpadding="0" cellspacing="0">
+                                                                                                        <tr>
+                                                                                                            <td align="center" valign="middle" width="100%"
+                                                                                                                style="color:#000000; padding:10px 20px 10px 20px; font-family:Arial;font-size:12px; line-height: 15px;vertical-align:middle;">
+                                                                                                                <strong>PBS Information:</strong> Section 100 item for de novo CD33-positive AML.<br> Refer to PBS Schedule for full authority information. </td>
+                                                                                                        </tr>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                            </tr>
+
+                                                                                            <tr>
+                                                                                                <td align="center" valign="top" width="100%"
+                                                                                                    style="color:#000000; padding:20px 0px 22px 0px; font-family:Arial;font-size:12px; line-height: 13px;vertical-align:top;">
+                                                                                                    BEFORE PRESCRIBING, PLEASE REVIEW PRODUCT INFORMATION <br> AVAILABLE
+                                                                                                    <a href="https://www.ebs.tga.gov.au/ebs/picmi/picmirepository.nsf/pdf?OpenAgent&id=CP-2020-PI-01422-1&d=20220725172310101 "
+                                                                                                        style="text-decoration: underline; border: none; outline: none; color:#000000; word-break: break-all;" target="_blank">HERE</a></td>
+                                                                                            </tr>
+
+                                                                                            <tr>
+                                                                                                <td
+                                                                                                    style="padding: 0px 0px 30px; color: #0000ba; font-family:  arial; font-size: 10px; font-weight: 400; line-height: 13px; text-align: center; text-decoration: none;">
+                                                                                                    <a href="https://www.pfizer.com.au/contacts?cmp={{Approved_Document_vod__c.CMS_Campaign_Source_Code__c}}"
+                                                                                                        target="_blank"
+                                                                                                        style="outline: none; color: #0000ba; text-decoration: none; border:none;">CONTACT
+                                                                                                        US</a> <span style="color: #d20007;font-weight: bold;">|</span>
+                                                                                                    <a href="{{unsubscribe_product_link[,AU_PBG]}}" target="_blank"
+                                                                                                        style="outline: none; color: #0000ba; text-decoration: none; border:none;">UNSUBSCRIBE</a>
+                                                                                                    <span style="color: #d20007;font-weight: bold;">|</span> <a
+                                                                                                        href="https://www.pfizer.com.au?cmp={{Approved_Document_vod__c.CMS_Campaign_Source_Code__c}}"
+                                                                                                        target="_blank"
+                                                                                                        style="outline: none; color: #0000ba; text-decoration: none; border:none;">PFIZER.COM.AU</a>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            </table>
+                                                                                            </td>
+                                                                                            </tr>
+
+                                                                                            <tr>
+
+                                                                                                <td width="100%" align="left" valign="top" style="padding:0px 45px 0px 45px;"
+                                                                                                    bgcolor="#dcf2f2" class="mo_pad_remove">
+                                                            
+                                                                                                    <table width="100%" cellpadding="0" cellspacing="0">
+                                                                                                        <tr>
+                                                                                                            <td align="center" width="100%" bgcolor="#dcf2f2"
+                                                                                                                style="color:#000000; padding:0px 0px 0px 0px; font-family:Arial;font-size:14px; line-height: 16px;vertical-align:top; text-align: center; ">
+                                                                                                                <table width="100%" cellpadding="0" cellspacing="0">
+                                                            
+                                                                                                                    <tr>
+                                                                                                                        <td align="left" valign="top" width="100%"
+                                                                                                                            style="color:#000000; padding:33px 0px 10px 0px; font-family:Arial;font-size:12px; line-height: 15px;vertical-align:top;">
+                                                                                                                            If you need to report an Adverse Event for Pfizer
+                                                                                                                            products do not reply to this email but please
+                                                                                                                            email <a
+                                                                                                                                href="mailto:AUS.AEreporting@Pfizer.com?subject=Expert%20panel%20recommendations%20for%20the%20management%20of%20adverse%20events%20associated%20with%20MYLOTARG%20(gemtuzumab ozogamicin)"
+                                                                                                                                style="text-decoration: none; color: #000000; outline: none; border: none;">AUS.AEreporting@Pfizer.com</a>
+                                                                                                                            or contact Pfizer Medical Information <a href="#"
+                                                                                                                                style="text-decoration: none; color: #000000; pointer-events: none; outline: none; border: none;">1800
+                                                                                                                                675 229.</a></td>
+                                                                                                                    </tr>
+                                                                                                                    <tr>
+                                                                                                                        <td align="left" valign="top" width="100%"
+                                                                                                                            style="color:#000000; padding:0px 0px 10px 0px; font-family:Arial;font-size:12px; line-height: 15px;vertical-align:top;">
+                                                                                                                            LEGAL NOTICE - Unless expressly stated otherwise, this
+                                                                                                                            message is confidential and may
+                                                                                                                            be privileged. It is intended for the addressee(s) only.
+                                                                                                                            Access to this e-mail by anyone else is
+                                                                                                                            unauthorised. If you are not an addressee, any
+                                                                                                                            disclosure or copying of the contents of this
+                                                                                                                            e-mail or any action taken (or not taken) in reliance on
+                                                                                                                            it is unauthorised and may be
+                                                                                                                            unlawful. If you are not an addressee, please inform the
+                                                                                                                            sender immediately. Pfizer Australia
+                                                                                                                            Pty Ltd. Pfizer Medical Information: 1800 675 229.
+                                                                                                                            Sydney, Australia.</td>
+                                                                                                                    </tr>
+                                                                                                                    <tr>
+                                                                                                                        <td align="left" valign="top" width="100%"
+                                                                                                                            style="color:#000000; padding:0px 0px 40px 0px; font-family:Arial;font-size:12px; line-height: 15px;vertical-align:top;">
+                                                                                                                            <sup style="font-size:0.6em; line-height:0; position: relative;">®</sup>
+                                                                                                                            Registered trademark. Pfizer Australia Pty Limited
+                                                                                                                            Sydney, Australia.
+                                                                                                                            <a href="https://www.pfizer.com.au?cmp={{Approved_Document_vod__c.CMS_Campaign_Source_Code__c}}"
+                                                                                                                                style="text-decoration: none; color: #000000;  outline: none; border: none;">www.pfizer.com.au</a>.
+                                                                                                                            <a href="#"
+                                                                                                                                style="text-decoration: none; color: #000000; pointer-events: none; outline: none; border: none;">Medical
+                                                                                                                                Information 1800 675 229. PP-MYL-AUS-0075 April 2022. PFE2285C.</a>
+                                                                                                                        </td>
+                                                                                                                    </tr>
+                                                                                                                    <tr>
+                                                                                                                        <td align="center" valign="top" style="text-align: center;">
+                                                                                                                            <a href="#"
+                                                                                                                                style="pointer-events: none; cursor:none;"><img
+                                                                                                                                    alt="logo" src="images/logo.jpg" width="150"
+                                                                                                                                    class=""></a></td>
+                                                                                                                    </tr>
+                                                                                                                    <tr>
+                                                                                                                        <td height="30" style="height: 30px;"></td>
+                                                                                                                    </tr>
+                                                                                                                </table>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    
+                                                                                                    
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td></tr></table>
+                                                            </body>
+                                                            
+                                                            </html>
+
+
+
+                                            
+                                            
+                                           
+
+                                            
+                                        
+                                           
+                                            
+                                            
+
+
+                                        

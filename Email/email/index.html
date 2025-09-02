@@ -1,0 +1,708 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- utf-8 works for most cases -->
+<meta name="viewport" content="width=device-width">
+<!-- Forcing initial-scale shouldn't be necessary -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+<title>Email RTE</title>
+<!--[if mso | ie]>
+<style>
+.sup {
+vertical-align: 1px !important;
+font-size: 100% !important;
+}
+</style>
+<![endif]--> 
+<!--[if ie]>
+<style>
+.sup {
+vertical-align: 6px !important;
+font-size: 60% !important;
+}
+</style>
+<![endif]--> 
+<!--[if gte mso 9]>
+<style>
+sup { font-size: 100% !important; }
+</style>
+<![endif]-->
+<style type="text/css">
+*, body, img {
+	padding: 0;
+	margin: 0;
+}
+body {
+	background-color: #ffffff;
+}
+/* What it does: Remove spaces around the email design added by some email clients. */
+	/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+	
+html, body {
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	height: 100% !important;
+	width: 100% !important;
+	font-family: Arial, Helvetica, sans-serif;
+}
+/* What it does: Stops email clients resizing small text. */
+	
+* {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+/* What it does: Stops Outlook from adding extra spacing to tables. */
+	
+table, td {
+	mso-table-lspace: 0pt;
+	mso-table-rspace: 0pt;
+}
+/* What it does: Fixes webkit padding issue. */
+	
+table {
+	border-spacing: 0 !important;
+}
+/* What it does: Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+	
+table {
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+/* What it does: Uses a better rendering method when resizing images in IE. */
+	
+img {
+	-ms-interpolation-mode: bicubic;
+}
+/* What it does: Overrides styles added images. */
+	
+img {
+	border: 0 !important;
+	outline: none !important;
+	text-decoration: none !important;
+}
+a, a:focus, a:active, img:focus, img:active, img {
+	outline: none;
+	text-decoration: none;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+.hover_eff:hover {
+	background-color: red;
+}
+.font_2 {
+	font-family: arial !important;
+	font-size: 11px !important;
+	line-height: 14px !important;
+	padding-bottom: 20px !important;
+	color: #424241;
+}
+.mobshow {
+	display: none !important;
+}
+.font_3 {
+	font-family: arial !important;
+	color: #000000;
+}
+.font_4 {
+	font-family: arial !important;
+	color: #464547;
+}
+
+@media only screen and (max-width: 550px) {
+#main_table {
+	width: 320px !important;
+	margin: 0 auto;
+}
+.main {
+	width: 320px !important;
+}
+.mobshow, * [lang~="x-mobshow"] {
+	display: block !important;
+	width: 100% !important;
+	width: auto !important;
+	max-height: inherit !important;
+	overflow: visible !important;
+	float: none !important
+}
+.mobhide, * [lang~="x-mobhide"] {
+	display: none !important
+}
+.removebreaks br {
+	display: none;
+}
+.resizeImage {
+	width: 100% !important;
+	display: block !important;
+}
+.pad_lr0 {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+.resizeImage_1 {
+	width: 90% !important;
+	display: block !important;
+}
+.resizeimg_2 {
+	height: 60px !important;
+}
+.resizePadding {
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+}
+.resizePadding_1 {
+	padding-left: 20px !important;
+	padding-right: 0px !important;
+}
+.padding-5 {
+	vertical-align: 37px !important;
+}
+.vertical-align-5 {
+	vertical-align: 7px !important;
+	padding-top: 0 !important;
+}
+/*custom css*/
+.td_resize {
+	width: 100% !important;
+	display: block !important;
+}
+.padding_b10 {
+	padding-bottom: 10px !important;
+}
+.resize_td, .resize_td .topimg_rsize {
+	width: 120px !important;
+	height: auto !important;
+}
+.resize_imgtd, .resize_imgtd img {
+	width: 50px !important;
+	height: auto !important;
+}
+.width-80 {
+	width: 80px !important;
+}
+.desk_break {
+	display: inline !important;
+}
+.padd_reset {
+	padding: 0px 5px !important;
+}
+.padd_bttm {
+	padding-bottom: 20px;
+}
+.font_1 {
+	font-size: 14px !important;
+}
+.al_text {
+	text-align: center !important;
+}
+.mob_break {
+	display: block !important;
+}
+.center {
+	text-align: center !important;
+}
+td .mo_hide {
+	display: none !important;
+	padding-bottom: 0px !important;
+}
+.mo_hide .mob_pad0 {
+	padding-bottom: 0px !important;
+}
+.pt_10 {
+	padding-top: 10px !important;
+	text-align: left !important;
+	padding-left: 0px !important;
+}
+.mobview {
+	display: block !important;
+	width: 100% !important;
+}
+.mob-view {
+	width: 100% !important;
+	display: block;
+	padding-top: 10px !important;
+}
+.mob_bulet {
+	width: 5% !important;
+}
+.mob_bulet1 {
+	width: 95% !important;
+}
+.padl_0 {
+	padding-left: 0 !important;
+}
+.noborder {
+	border: none !important
+}
+.mob_font {
+	font-size: 25px !important;
+	line-height: 28px !important;
+	height: 48px !important;
+}
+.padl_5 {
+	padding-left: 5px !important;
+}
+.leftv {
+	text-align: left!important;
+}
+.viewMob1 {
+display: block !important;
+width:100% !important;
+padding: 0px 0px 0px 0px !important;
+text-align: center !important;
+}
+.viewMob12 {
+width:50% !important;
+padding: 0px 0px 0px 0px !important;
+text-align: left !important;
+}
+.clicka{
+	display: block !important;
+	width: 50% !important;
+	text-align: center !important;
+	margin: 0 auto !important;
+}
+.viewMob13{
+	padding: 0px 0px 20px 0px !important;
+
+}
+.logoo{
+	width: 25% !important;
+	margin: 0 auto;
+}
+
+
+
+
+}
+</style>
+</head>
+<!--https://helix:8443/svn/Pfizer_Ex-NA_APAC_PFC-52094__Precedex_5th_Hemodynamic_stability_RTE_ICU_2022/trunk/RTE/Deliverables/HTML
+-->
+
+<body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#ffffff;">
+      <tbody>
+        <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+				
+                <tr>
+                    <td valign="top" width="100%" align="center" style="background-color:#ffffff;"><table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="fullgmail" id="main_table">
+                        <tr>
+                          <td width="100%" valign="top" align="left" style="padding:0;"><table width="100%" cellpadding="0" cellspacing="0">
+                            
+                            <tr>
+                            <td width="100%" valign="top" align="left"> <a href="#" style="pointer-events: none;text-decoration: none; cursor:none;text-align: left; vertical-align: top;"> <img  src="images/banner.jpg"  width="600"  style="width: 600px;"  alt="banner" class="viewMob1"> </a></td>
+                            </tr>
+
+                            <tr>
+                                <td width="100%" valign="top" align="left" style="color:#616164; padding:40px 40px 0px 48px; font-family:Arial;font-size:14px; line-height: 17px;vertical-align:top; text-align: left;"><span style="border-bottom: 1px dashed #3b3b3b;">{{accLname}} {{accFname}} 교수님께</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td width="100%" valign="top" align="left" style="font-size:13px;line-height:17px;color:#3b3b3b ; font-family: Arial; vertical-align: top ;text-align:left;padding:10px 40px 0px 48px;"> 안녕하세요. 교수님</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td width="100%" valign="top" align="left" style="font-size:13px;line-height:17px;color:#3b3b3b ; font-family: Arial; vertical-align: top ;text-align:left;padding:8px 40px 0px 48px;"> 한국화이자제약 호스피탈사업부 담당자 {{userName}} 입니다.</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td width="100%" valign="top" align="left" style="font-size:13px;line-height:17px;color:#3b3b3b ; font-family: Arial; vertical-align: top ;text-align:left;padding:28px 40px 0px 48px;"> 환자들의 진료를 위해 항상 고생하시고 애쓰시는 모습에 진심으로 깊은 존경을 표합니다.</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td width="100%" valign="top" align="left" style="font-size:13px;line-height:17px;color:#3b3b3b ; font-family: Arial; vertical-align: top ;text-align:left;padding:8px 40px 0px 48px;"> 프리세덱스팀은 교수님의 진료에 조금이나마 도움이 되고자 중환자의 진정제 선택 시,</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td width="100%" valign="top" align="left" style="font-size:13px;line-height:17px;color:#3b3b3b ; font-family: Arial; vertical-align: top ;text-align:left;padding:8px 40px 0px 48px;"> 혈역학적 안정성을 중요하게 고려해야 하는 이유에 대해 다음과 같이 공유 드리고자</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td width="100%" valign="top" align="left" style="font-size:13px;line-height:17px;color:#3b3b3b ; font-family: Arial; vertical-align: top ;text-align:left;padding:8px 40px 0px 48px;"> 합니다.</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td width="100%" valign="top" align="left" style="font-size:13px;line-height:17px;color:#3b3b3b ; font-family: Arial; vertical-align: top ;text-align:left;padding:8px 40px 0px 48px;">혹시 아래 정보와 관련하여 추가적으로 궁금한 사항이 있으시다면, </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td width="100%" valign="top" align="left" style="font-size:13px;line-height:17px;color:#3b3b3b ; font-family: Arial; vertical-align: top ;text-align:left;padding:8px 40px 0px 48px;"> 언제든 편하게 연락 부탁드리겠습니다.</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td width="100%" valign="top" align="left" style="font-size:13px;line-height:17px;color:#3b3b3b ; font-family: Arial; vertical-align: top ;text-align:left;padding:28px 40px 0px 48px;"> 한국화이자제약 {{userName}} 올림</td>
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td width="100%" valign="top" align="left" style="font-size:13px;line-height:17px;color:#3b3b3b ; font-family: Arial; vertical-align: top ;text-align:left;padding:8px 40px 0px 48px;">(TEL: {{User.MobilePhone}}</td>
+                                                                        </tr>
+
+                                                                        <tr>			
+                                                                            <td width="100%" valign="top" align="center" style="font-size:22px;line-height:25px; color:#070056;background-color: #ffffff; font-family: Arial;padding:65px 0px 0px 0px;text-align: center;font-weight: bold; vertical-align: top;">혈역학적 안정성,</td>
+                                                                            </tr>
+
+                                                                            <tr>			
+                                                                                <td width="100%" valign="top" align="center" style="font-size:22px;line-height:25px; color:#070056;background-color: #ffffff; font-family: Arial;padding:5px 0px 25px 0px;text-align: center;font-weight: bold; vertical-align: top;">진정제의 선택이 왜 중요할까요?</td>
+                                                                                </tr>
+
+                                                                                <tr>
+                                                                                    <td width="100%" valign="top" align="center"  style="vertical-align: top; text-align:center"><a href="#" style="cursor: none;pointer-events: none;"><img src="images/contentcard.jpg" width="476" style="width: 476px;"  alt="contentcard" class="viewMob1"></a></td>
+                                                                                    </tr>
+
+                                                                                    <tr>
+                                                                                        <td width="100%" valign="top" align="left" style="width:100%;padding:60px 0px 0px 0px; text-align:left; vertical-align: top;">
+                                                                                            <table  width="100%" cellpadding="0" cellspacing="0" border="0">
+
+                                                                                                <tr>
+                                                                                                    <td valign="center" width="15%" align="left"><a href="#" style="cursor: none;pointer-events: none; text-align: left; vertical-align: center;"><img src="images/card.jpg" width="77" style="width: 77px;"  alt="contentcard" class="viewMob1"></a></td>
+
+                                                                                                    <td width="85%" valign="top" align="left" style="text-align: left;color:#070056; font-family: Arial;padding:3px 0px 0px 10px;">
+                                                                                                        <table width="85%" align="left" cellpadding="0" cellspacing="0">
+                                                                                                            <tr>
+                                                                                                                <td width="100%" valign="middle" align="center" style="text-align: center;color:#070056; font-family: Arial;padding:3px 0px 0px 0px;font-size:17px;line-height:20px;vertical-align:middle;"> 적절한 평균동맥압 유지를 위해 노르에피네프린 투여가</td>
+                                                                                                                </tr>
+
+                                                                                                                    <tr>
+                                                                                                                        <td width="100%" valign="middle" align="center" style="text-align: center;color:#070056; font-family: Arial;padding:8px 0px 0px 0px;font-size:17px;line-height:20px;vertical-align:middle; font-weight: bold;"> 필요한 패혈성 쇼크 환자 38명을 대상으로</td>
+                                                                                                                        </tr>
+
+                                                                                                                            <tr>
+                                                                                                                                <td width="100%" valign="middle" align="center" style="text-align: center;color:#070056; font-family: Arial;padding:8px 0px 0px 0px;font-size:17px;line-height:20px;vertical-align:middle;font-weight: bold;"> 프로포폴에서 프리세덱스로 교체 투여 하였을 때,</td>
+                                                                                                                                </tr>
+
+                                                                                                                                <tr>
+                                                                                                                                    <td width="100%" valign="middle" align="center" style="text-align: center;color:#070056; font-family: Arial;padding:8px 0px 0px 0px;font-size:25px;line-height:28px;vertical-align:middle;">프리세덱스는 프로포폴과 유사한</td>
+                                                                                                                                    </tr>
+
+                                                                                                                                    <tr>
+                                                                                                                                        <td width="100%" valign="middle" align="center" style="text-align: center;color:#070056; font-family: Arial;padding:8px 0px 0px 0px;font-size:25px;line-height:28px;vertical-align:middle;"> 깊은 진정 수준을 유지하였으며,</td>
+                                                                                                                                        </tr>
+
+
+                                                                                                                                        <tr>
+                                                                                                                                            <td width="100%" valign="middle" align="center" style="text-align: center;color:#070056; font-family: Arial;padding:8px 0px 0px 0px;font-size:25px;line-height:28px;vertical-align:middle;font-weight: bold;"> 노르에피네프린 요구량을 유의하게</td>
+                                                                                                                                            </tr>
+
+                                                                                                                                            <tr>
+                                                                                                                                                <td width="100%" valign="middle" align="center" style="text-align: center;color:#070056; font-family: Arial;padding:8px 0px 0px 0px;font-size:25px;line-height:28px;vertical-align:middle;"><b>감소</b>시켰습니다.<sup style="line-height: 0px; font-size: 65%;">6</sup></td>
+                                                                                                                                                </tr>
+                                                                                                                                            
+                                                                                                                                            </table>
+                                                                                                                                        </td>
+                                                                                                                                        </tr>
+                                                                                                                                        </table>
+                                                                                                                                        </td>
+                                                                                                                                        </tr>
+
+
+                                                                                                                                        <tr>
+                                                                                                                                            <td width="100%" valign="top" align="center" style="padding:14px 52px 10px 60px;text-align: center;vertical-align: top;">
+                                                                                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                                                                                <tr>
+                                                                                                                                                    <td width="78%" valign="middle" align="left" height="22" style="font-size:9px;line-height:12px; color:#000048;background-color: #fbf6ed; font-family: Arial; text-align: center;height:22px;width:473px;vertical-align: middle;font-weight: bold;" class="viewMob1">Norepinephrine dosages</td>
+                                                                                                                                                    </tr>
+                                                                                                                                                    </table>
+                                                                                                                                                    </td>
+                                                                                                                                                    </tr>
+
+
+                                                                                                                                                    <tr>
+                                                                                                                                                        <td valign="top" width="100%" align="center"><a href="#" style="cursor: none;pointer-events: none; text-align:center; vertical-align: top;"><img src="images/graph.jpg" width="509" style="width: 509px;"  alt="graph" class="viewMob1"></a></td>
+                                                                                                                                                        </tr>
+
+
+                                                                                                                                                        <tr>
+                                                                                                                                                            <td width="100%" valign="top" align="left" style="font-size:15px;line-height:18px; color:#24418a; font-family: Arial; padding:5px 50px 0px 65px;text-align: left; vertical-align: top;">    
+                                                                                                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                                                                                                    <tr>
+                                                                                                                                                                        <td width="50%" valign="top" align="left" style="font-size:7px;line-height:10px; color:#6D6F71 ; font-family: Arial;text-align: left;vertical-align: top;">*p&lt; 0.05 for post hoc multiple comparison.</td>
+                                                                                                                                                                            
+                                                                                                                                                                            <td width="50%" valign="top" align="right" style="font-size:7px;line-height:10px; color:#6D6F71; font-family: Arial;text-align: right;vertical-align: top; ">Adapted from Morelli A, et al. 2019.</td>
+                                                                                                                                                                            </tr>
+                                                                                                                                                                            </table>
+                                                                                                                                                                            </td>
+                                                                                                                                                                            </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                                                                                                                                <td width="100%" valign="top" align="left" style="font-size:7px;line-height:10px; color:#6D6F71; font-family: Arial;padding:0px 65px 10px 65px;text-align: left;vertical-align: top;">
+                                                                                                                                                                                    <b>Before DEX,</b> propofol+remifentanil sedation; <b>During DEX,</b> dexmedetomidine+remifentanil; <b>After DEX,</b> propofol+remifentanil
+                                                                                                                                                                                </td>
+                                                                                                                                                                                </tr>
+
+
+                                                                                                                                                                                <tr>
+                                                                                                                                                                                    <td width="100%" valign="top" align="left" style="width:100%;padding:60px 0px 0px 0px; text-align:left; vertical-align: top;">
+                                                                                                                                                                                        <table  width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                            
+                                                                                                                                                                                            <tr>
+                                                                                                                                                                                                <td valign="center" width="15%" align="left"><a href="#" style="cursor: none;pointer-events: none; text-align: left; vertical-align: center;"><img src="images/card.jpg" width="77" style="width: 77px;"  alt="contentcard" class="viewMob1"></a></td>
+                                                                                            
+                                                                                                                                                                                                <td width="85%" valign="top" align="left" style="text-align: left;color:#070056; font-family: Arial;padding:0px 0px 0px 0px;">
+                                                                                                                                                                                                    <table width="85%" align="left" cellpadding="0" cellspacing="0">
+                                                                                                                                                                                                        <tr>
+                                                                                                                                                                                                            <td width="100%" valign="middle" align="center" style="text-align: center;color:#070056; font-family: Arial;padding:3px 0px 0px 0px;font-size:25px;line-height:28px;vertical-align:middle;"> 심혈관 수술 후 ICU에 입원한 환자 대상,</td>
+                                                                                                                                                                                                            </tr>
+                                                                                            
+                                                                                                                                                                                                                <tr>
+                                                                                                                                                                                                                    <td width="100%" valign="middle" align="center" style="text-align: center;color:#070056; font-family: Arial;padding:8px 0px 0px 0px;font-size:25px;line-height:28px;vertical-align:middle; font-weight: bold;"> 프리세덱스 투여군은</td>
+                                                                                                                                                                                                                    </tr>
+                                                                                            
+                                                                                                                                                                                                                        <tr>
+                                                                                                                                                                                                                            <td width="100%" valign="middle" align="center" style="text-align: center;color:#070056; font-family: Arial;padding:8px 0px 0px 0px;font-size:25px;line-height:28px;vertical-align:middle;font-weight: bold;"> ICU 입원 4, 8, 12시간 후 및</td>
+                                                                                                                                                                                                                            </tr>
+                                                                                            
+                                                                                                                                                                                                                            <tr>
+                                                                                                                                                                                                                                <td width="100%" valign="middle" align="center" style="text-align: center;color:#070056; font-family: Arial;padding:8px 0px 0px 0px;font-size:25px;line-height:28px;vertical-align:middle;"><b>MV weaning 1시간 후의 심박수</b>가</td>
+                                                                                                                                                                                                                                </tr>
+                                                                                            
+                                                                                                                                                                                                                                <tr>
+                                                                                                                                                                                                                                    <td width="100%" valign="middle" align="center" style="text-align: center;color:#070056; font-family: Arial;padding:8px 0px 0px 0px;font-size:25px;line-height:28px;vertical-align:middle;">프로포폴 투여군 대비 유의하게 낮았습니다.<sup style="line-height: 0px; font-size: 65%;">7</sup></td>
+                                                                                                                                                                                                                                    </tr>
+                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                </table>
+                                                                                                                                                                                                                                    </td>
+                                                                                                                                                                                                                                    </tr>
+                                                                                                                                                                                                                                    </table>
+                                                                                                                                                                                                                                    </td>
+                                                                                                                                                                                                                                    </tr>
+
+                                                                                                                                                                                                                                    <tr>
+                                                                                                                                                                                                                                        <td width="100%" valign="top" align="center" style="padding:14px 52px 10px 60px;text-align: center;vertical-align: top;">
+                                                                                                                                                                                                                                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                                                                                                                                                                            <tr>
+                                                                                                                                                                                                                                                <td width="78%" valign="middle" align="left" height="22" style="font-size:9px;line-height:12px; color:#000048;background-color: #fbf6ed; font-family: Arial; text-align: center;height:22px;width:473px;vertical-align: middle;font-weight: bold;" class="viewMob1">Heart rate measurements at different times between groups</td>
+                                                                                                                                                                                                                                                </tr>
+                                                                                                                                                                                                                                                </table>
+                                                                                                                                                                                                                                                </td>
+                                                                                                                                                                                                                                                </tr>
+
+
+                                                                                                                                                                                                                                                <tr>
+                                                                                                                                                                                                                                                    <td valign="top" width="100%" align="center"><a href="#" style="cursor: none;pointer-events: none; text-align:center; vertical-align: top;"><img src="images/table.jpg" width="480" style="width: 480px;"  alt="graph" class="viewMob1"></a></td>
+                                                                                                                                                                                                                                                    </tr>
+
+                                                                                                                                                                                                                                                    <tr>
+                                                                                                                                                                                                                                                        <td width="100%" valign="top" align="left" style="font-size:15px;line-height:18px; color:#24418a; font-family: Arial; padding:0px 65px 0px 65px;text-align: left;vertical-align: top;">    
+                                                                                                                                                                                                                                                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                                                                                                                                                                                                                <tr>			
+                                                                                                                                                                                                                                                                    <td width="50%" valign="top" align="left" style="font-size:7px;line-height:10px; color:#6D6F71; font-family: Arial;padding:10px 0px 0px 0px;text-align: left;vertical-align: top;">*<i>P</i>&lt;0.05 is significant.</td>
+                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                    <td valign="top" width="50%" align="right" style="font-size:7px;line-height:10px; color:#6D6F71; font-family: Arial;padding:10px 0px 0px 10px;text-align: right;vertical-align: top;">Adapted from Elgebaly AS, et al. 2018.</td>
+                                                                                                                                                                                                                                                                </tr>
+                                                                                                                                                                                                                                                            </table>
+                                                                                                                                                                                                                                                        </td>
+                                                                                                                                                                                                                                                    </tr>
+
+                                                                                                                                                                                                                                                    <tr>
+                                                                                                                                                                                                                                                        <td width="100%" valign="top" align="justify" style="text-align: justify;font-size:8px;line-height:11px;color:#414142; font-family: Arial;padding:8px 40px 0px 40px; "><b>Group D,</b> dexmedetomidine; <b>Group P,</b> propofol; <b>SD,</b> Standard deviation; <b>ICU,</b> intensive care unit; <b>h,</b> hour; <b>MV,</b> mechanical ventilation; <b>t,</b> student's t-test</td>
+                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                        <tr>
+                                                                                                                                                                                                                                                            <td width="100%" valign="top" align="justify" style="text-align: justify;font-size:8px;line-height:11px;color:#414142; font-family: Arial;padding:15px 40px 0px 40px; "> <b>References 1.</b> 프리세덱스주 제품설명서. 개정년월일: <a href="#" style="color: #414142; text-decoration: none;pointer-events:none;cursor:none;font-family:Arial;font-size:8px;border: none;">2021년 07월 21일</a>. <b>2.</b> 프리세덱스 프리믹스주 제품설명서. 개정년월일: <a href="#" style="color: #414142; text-decoration: none;pointer-events:none;cursor:none;font-family:Arial;font-size:8px;">2021년 07월 21일</a>. <b>3.</b> Kamali A, et al. A
+                                                                                                                                                                                                                                                                Comparison of the Effects of Dexmedetomidine and Propofol in Controlling the Hemodynamic Responses after Intubation: A Double-Blind, Randomized,
+                                                                                                                                                                                                                                                                Clinical Trial Study. <i>Open Access Maced J Med Sci.</i> <a href="#" style="color: #414142; text-decoration: none;pointer-events:none;cursor:none;font-family:Arial;font-size:8px;">2018 Nov 10;6(11):2045-2050</a>. <b>4.</b> Buckley MS, et al. Adverse Hemodynamic Events Associated With
+                                                                                                                                                                                                                                                                Concomitant Dexmedetomidine and Propofol for Sedation in Mechanically Ventilated ICU Patients. <i>J Intensive Care Med.</i> <a href="#" style="color: #414142; text-decoration: none;pointer-events:none;cursor:none;font-family:Arial;font-size:8px;">2020 Dec;35(12):1536-1545</a>. <b>5.</b>
+                                                                                                                                                                                                                                                                Buckley MS, et al. Dexmedetomidine for Facilitating Mechanical Ventilation Extubation in Difficult-to-Wean ICU Patients: Systematic Review and Meta-
+                                                                                                                                                                                                                                                                Analysis of Clinical Trials. <i>J Intensive Care Med.</i> <a href="#" style="color: #414142; text-decoration: none;pointer-events:none;cursor:none;font-family:Arial;font-size:8px;">2020 Jul 6:885066620937673</a>. <b>6.</b> Morelli A, et al. The Effect of Propofol and Dexmedetomidine Sedation
+                                                                                                                                                                                                                                                                on Norepinephrine Requirements in Septic Shock Patients: A Crossover Trial. <i>Crit Care Med.</i> <a href="#" style="color: #414142; text-decoration: none;pointer-events:none;cursor:none;font-family:Arial;font-size:8px;">2019 Feb;47(2):e89-e95</a>. <b>7.</b> Elgebaly AS, et al. Sedation
+                                                                                                                                                                                                                                                                effects by dexmedetomidine versus propofol in decreasing duration of mechanical ventilation after open heart surgery. <i>Ann Card Anaesth.</i> <a href="#" style="color: #414142; text-decoration: none;pointer-events:none;cursor:none;font-family:Arial;font-size:8px;">2018 Jul-
+                                                                                                                                                                                                                                                                    Sep;21(3):235-242</a>.</td>
+                                                                                                                                                                                                                                                                    </tr>
+
+                                                                                                                                                                                                                                                                    <tr>
+                                                                                                                                                                                                                                                                        <td width="100%" valign="top" align="justify" style="text-align: justify;font-size:8px;line-height:11px;color:#414142; font-family: Arial;padding:15px 40px 0px 40px; "><b>Study design<sup style="font-size:0.6em; line-height:0; position: relative;">6</sup></b><br>
+                                                                                                                                                                                                                                                                            The objective of the prospective open-label crossover study was to test the hypothesis that switching from sedation with propofol to the ɑ-2 agonist
+                                                                                                                                                                                                                                                                            dexmedetomidine may decrease norepinephrine doses in septic shock. Thirty-eight septic shock patients requiring norepinephrine to maintain adequate
+                                                                                                                                                                                                                                                                            mean arterial pressure and needing deep sedation with propofol and remifentanil to maintain a Richmond Agitation- Sedation Scale score between –3
+                                                                                                                                                                                                                                                                            and –4. After 60 minutes of hemodynamic and sedation stability (constant propofol-remifentanil and norepinephrine doses) and optimizing intravascular
+                                                                                                                                                                                                                                                                            volume status, an initial set of baseline measurements was obtained (time point: pre-dexmedetomidine). At this time, propofol was replaced by
+                                                                                                                                                                                                                                                                            continuous infusion of dexmedetomidine (starting dose 0.7 μg/kg/hr). Dexmedetomidine dosages were adjusted to maintain the same sedation level as
+                                                                                                                                                                                                                                                                            during propofol-based sedation. After 4 hours of dexmedetomidine infusion, a second dataset was obtained (during dexmedetomidine). Then, sedation
+                                                                                                                                                                                                                                                                            was switched back to propofol, always keeping same sedation level. Primary outcome was the change in norepinephrine doses between periods,
+                                                                                                                                                                                                                                                                            according to the sedation strategy.
+                                                                                                                                                                                                                                                                            </td>
+                                                                                                                                                                                                                                                                            </tr>
+
+                                                                                                                                                                                                                                                                            <tr>
+                                                                                                                                                                                                                                                                                <td width="100%" valign="top" align="justify" style="text-align: justify;font-size:8px;line-height:11px;color:#414142; font-family: Arial;padding:15px 40px 0px 40px; "><b>Study design<sup style="font-size:0.6em; line-height:0; position: relative;">7</sup></b><br>
+                                                                                                                                                                                                                                                                                    The objective of the study was to compare the suitability (efficacy and safety) of dexmedetomidine versus propofol for patients admitted to the ICU
+                                                                                                                                                                                                                                                                                    after the cardiovascular surgery for the postoperative sedation before weaning from mechanical ventilation. A total of 50 patients admitted to the ICU
+                                                                                                                                                                                                                                                                                    after cardiovascular surgery, aged from 18 to 55 years and requiring mechanical ventilation on arrival to the ICU were enrolled in a prospective and
+                                                                                                                                                                                                                                                                                    comparative study. They were randomly divided into two groups as follows: Group D patients (n = 25) received dexmedetomidine in a maintenance
+                                                                                                                                                                                                                                                                                    infusion dose of 0.8 μg/kg/h and Group P patients (n = 25) received propofol in a maintenance infusion dose of 1.5 mg/kg/h. The patients were assessed
+                                                                                                                                                                                                                                                                                    for 12 h postoperatively, and dosing of the study drug was adjusted based on sedation assessment performed with the RASS. The patients were required
+                                                                                                                                                                                                                                                                                    to be within the RASS target range of -2 to +1 at the time of study drug initiation.
+                                                                                                                                                                                                                                                                                        </td>
+                                                                                                                                                                                                                                                                                        </tr>
+
+
+                                                                                                                                                                                                                                                                                        <tr>
+                                                                                                                                                                                                                                                                                            <td width="100%" valign="top" align="justify" style="text-align: justify;font-size:8px;line-height:11px;color:#414142; font-family: Arial;padding:15px 40px 0px 40px; "><b>프리세덱스주/프리세덱스 프리믹스주 주요 안전성 정보<sup style="font-size:0.6em; line-height:0; position: relative;">1,2</sup></b><br>
+                                                                                                                                                                                                                                                                                                •프리세덱스는 의사에 의해 투여되어야 하며, 환자가 이 약을 투여받는 동안 지속적으로 감시하여야 합니다. •자극을 받았을 때, 프리세덱스를 투여 받은 일부 환자에서 
+                                                                                                                                                                                                                                                                                                각성되거나 기민함이 나타날 수 있습니다. •프리세덱스를 24시간 이상 투여하고 갑자기 중지하면, 알파-2-아드레날린 작용제인 클로니딘에서 보고된 바와 같은 유사한 
+                                                                                                                                                                                                                                                                                                금단증상이 나타날 수 있습니다. •프리세덱스를 투여 받은 318명 대상 의식하 진정에 대한 2개의 임상시험에서, 호흡저하 (호흡이 8번 미만 또는 기저치로부터 25% 
+                                                                                                                                                                                                                                                                                                초과 감소)는 의식하 진정에서 2% 이상 발생한 이상반응 중 하나였으며, 호흡률 감소 및 저산소증은 이 약과 대조군 사이에 유사하였습니다. 가장 빈번한 이상반응은 
+                                                                                                                                                                                                                                                                                                저혈압, 서맥 및 구강건조로 나타났습니다. •프리세덱스와 마취제, 진정제, 수면제 및 마약류와의 병용투여 시 효과가 증강되며, 특정 연구에서 세보플루란, 이소플루란, 
+                                                                                                                                                                                                                                                                                                프로포폴, 알펜타닐 및 미다졸람에 대하여 이러한 효과가 확인되었습니다. 프리세덱스와 이소플루란, 프로포폴, 알펜타닐 및 미다졸람 사이의 약동학적 상호관계는 
+                                                                                                                                                                                                                                                                                                증명되지 않았으나, 약력학적 상호관계 때문에 이 약과 병용 투여할 때 이 약 또는 마취제, 진정제, 수면제 또는 마약류의 감량이 필요합니다. •집중치료 관리하의 환자를 
+                                                                                                                                                                                                                                                                                                대상으로 프리세덱스를 24시간 이상 지속 투여한 무작위배정 활성 대조 임상시험에서 시간에 따른 섬망 발생률은 2.0-3.9%로 나타났습니다. •집중치료 관리하의 환자 
+                                                                                                                                                                                                                                                                                                1,007명을 대상으로 프리세덱스를 24시간 이내로 투여한 임상시험에서 고혈당증은 2% 이상 발생한 이상반응 중 하나였으며, 가장 빈번한 이상반응은 저혈압, 빈맥, 
+                                                                                                                                                                                                                                                                                                구강건조로 나타났습니다.
+                                                                                                                                                                                                                                                                                                    </td>
+                                                                                                                                                                                                                                                                                                    </tr>
+
+
+                                                                                                                                                                                                                                                                                                    <tr>
+                                                                                                                                                                                                                                                                                                        <td width="100%" valign="top" align="justify" style="text-align: justify;font-size:8px;line-height:11px;color:#414142; font-family: Arial;padding:15px 40px 0px 40px; "><b>프리세덱스주 (덱스메데토미딘염산염) 200 mcg/2 mL / 프리세덱스 프리믹스주 (덱스메데토미딘염산염) 80 mcg/20 mL, 200 mcg/50 mL, 400 mcg/100 mL 
+                                                                                                                                                                                                                                                                                                            제품요약정보</b><br>
+                                                                                                                                                                                                                                                                                                            <b>[효능·효과]</b> 1. 집중치료 관리하의 진정: 집중치료 관리하에 초기 삽관되어 인공호흡을 실시하는 환자의 진정 2. 수술 및 시술 시 비삽관 환자의 의식하 진정: 1) 감시하 
+                                                                                                                                                                                                                                                                                                            마취 관리 (Monitored Anesthesia Care, MAC) 2) 의식하 광섬유 삽관 (Awake Fiberoptic Intubation. AFI) <b>[용법·용량]</b> 1. 집중치료 관리하의 진정 •개시: 10-
+                                                                                                                                                                                                                                                                                                            20분간 1 mcg/kg •유지: 0.2-0.7 mcg/kg/hr. 정맥주입 속도는 원하는 진정 수준을 달성하기 위하여 조절 2. 수술 및 시술 시 비삽관 환자의 의식하 진정 •개시: 10분간 
+                                                                                                                                                                                                                                                                                                            1 mcg/kg 안과 수술과 같은 침습성이 적은 수술에서는 10분 동안 0.5 mcg/kg •유지: 0.6 mcg/kg/hr. 원하는 임상효과를 얻기 위해 0.2~1 mcg/kg/hr으로 적정 가능 
+                                                                                                                                                                                                                                                                                                            의식하 광섬유 삽관 환자는 기관 내 튜브가 안전하게 될 때까지 0.7 mcg/kg/hr <b>[경고]</b> 이 약은 의사에 의해 투여되어야 하며 환자가 이 약을 투여 받는 동안 지속적으로 
+                                                                                                                                                                                                                                                                                                            감시하여야 한다. 간장애 환자에서는 이 약의 청소율이 감소되기 때문에 간기능이 손상된 환자에게는 용량을 감량하여야 한다. <b>[금기]</b> 이 약의 성분에 대하여 과민증 
+                                                                                                                                                                                                                                                                                                            또는 과거 과민증의 경험이 있는 환자 <b>[신중투여군]</b> 심혈관 질환 환자. 심장기능이 저하된 환자. 순환혈류랑이 저하된 환자. 간장애 환자. 신장애 환자 <b>[이상반응]</b>
+                                                                                                                                                                                                                                                                                                            다양한 조건하에서 임상시험이 실시되었기 때문에 이 약의 임상시험에서 관찰된 이상반응 비율은 다른 약물의 임상시험에서의 비율과 직접적으로 비교할 수 없으며, 
+                                                                                                                                                                                                                                                                                                            실제적으로 관찰되는 비율과 다를 수도 있다. <b>[프리세덱스주 개정년월일]</b> 2021.07.21 <b>[프리세덱스 프리믹스주 개정년월일]</b> 2021.07.21 
+                                                                                                                                                                                                                                                                                                                    </td>
+                                                                                                                                                                                                                                                                                                                    </tr>
+
+                                                                                                                                                                                                                                                                                                                    <tr>
+                                                                                                                                                                                                                                                                                                                        <td width="100%" valign="top" align="justify" style="text-align: justify;font-size:8px;line-height:11px;color:#414142; font-family: Arial;padding:15px 40px 10px 40px; ">※제품에 대한 자세한 정보는 최신의 제품설명서를 참고하시기 바라며, 홈페이지(<a href="http://www.pfizer.co.kr/?cmp={{Approved_Document_vod__c.CMS_Campaign_Source_Code__c}}" style="color: #414142 ; text-decoration: none;" target="_blank">www.pfizer.co.kr</a>)를 통해 확인하실 수 있습니다.</td>
+                                                                                                                                                                                                                                                                                                                        </tr>
+
+
+                                                                                                                                                                                                                                                                                                                        <tr>
+                                                                                                                                                                                                                                                                                                                            <td width="100%" align="center" valign="top" style="text-align:center; vertical-align: top;">
+                                                                                                                                                                                                                                                                                                                                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                                                                                                                                                                                                                                                                                                                                    <tr>
+                                                                                                                                                                                                                                                                                                                                        <td width="7%" align="left" valign="top"></td>
+                                                                                                                                                                                                                                                                                                                            <td width="85%" align="left" valign="top" style="text-align:left;color:#414142; font-family: Arial;height: 2px;background-color:#3b3b3b;width: 400px;" class="viewMob1"> </td>
+                                                                                                                                                                                                                                                                                                                            <td width="7%" align="left" valign="top"></td>
+                                                                                                                                                                                                                                                                                                                            </tr>
+                                                                                                                                                                                                                                                                                                                            </table>
+                                                                                                                                                                                                                                                                                                                            </td>
+                                                                                                                                                                                                                                                                                                                            </tr>
+
+
+                                                                                                                                                                                                                                                                                                                            <tr>
+                                                                                                                                                                                                                                                                                                                                <td width="100%" valign="top" align="left" style="text-align:left;padding:5px 40px 10px 40px; ">
+                                                                                                                                                                                                                                                                                                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                                                                                                                                                                                                                                                                        <tr>
+                                                                                                                                                                                                                                                                                                                                        <td width="2%" valign="top" align="center" style="color:#414142 ;font-family:arial;vertical-align:top;font-size:8px;line-height:11px; text-align: center;">• </td>
+                                                                                                                                                                                                                                                                                                                                        <td width="98%" valign="middle" align="justify" style="color:#414142 ;font-family:arial;vertical-align:middle;font-size:8px;line-height:11px; text-align: justify;">서울특별시 중구 퇴계로 1&zwj;1&zwj;0 화이자타워 (&zwj;0&zwj;4&zwj;6&zwj;3&zwj;1&zwj;) TEL:<a href="#" style="color: #414142 ; text-decoration: none;pointer-events:none;cursor:none;">0&zwj;2&zwj;-&zwj;3&zwj;1&zwj;7&zwj;-&zwj;2&zwj;1&zwj;1&zwj;4</a> 수신자부담:<a href="#" style="color: #414142 ; text-decoration: none;pointer-events:none;cursor:none;">0&zwj;8&zwj;0&zwj;-&zwj;0&zwj;2&zwj;2&zwj;-&zwj;1&zwj;4&zwj;0&zwj;0</a> Website: <a href="http://www.pfizer.co.kr/?cmp={{Approved_Document_vod__c.CMS_Campaign_Source_Code__c}}" style="color: #414142 ; text-decoration: none;" target="_blank">www.pfizer.co.kr</a></td>
+                                                                                                                                                                                                                                                                                                                                        </tr>
+
+                                                                                                                                                                                                                                                                                                                                        <tr>
+                                                                                                                                                                                                                                                                                                                                            <td width="2%" valign="top" align="center" style="color:#414142 ;font-family:arial;vertical-align:top;font-size:8px;line-height:11px; text-align: center;">• </td>
+                                                                                                                                                                                                                                                                                                                                            <td width="98%" valign="middle" align="justify" style="color:#414142 ;font-family:arial;vertical-align:middle;font-size:8px;line-height:11px; text-align: justify;">본 전자우편에 포함된 정보는 위에 기재된 수신인의 사전 동의 하에 수신인만을 위해 발송되는 것으로서 화이자의 기밀정보가 포함되어 있습니다. 따라서 수신인은 본 전자우편을 무단으로 제3자에게 전송, 배포해서는 안되며, 일부의 내용이라도 공개, 복사해서는 안됩니다. 잘못 수신된 경우에는 즉시 전자우편(<a href="mailto:koreaemcm@pfizer.com?subject=(광고)%20중환자의%20진정제%20선택%20시,%20혈역학적%20안정성을%20중요하게%20고려해야%20하는%20이유에%20대해%20더%20자세히%20알고%20싶으신가요?
+                                                                                                                                                                                                                                                                                                                                                " style="color: #414142 ;text-decoration: none;cursor: pointer;">koreaemcm@pfizer.com</a>)으로 연락하여 주시고, 원본 및 사본과 그에 따른 첨부 문서를 모두 삭제하여 주시기 바랍니다. 협조해 주셔서 감사합니다.</td>
+                                                                                                                                                                                                                                                                                                                                            </tr>
+
+
+                                                                                                                                                                                                                                                                                                                                            <tr>
+                                                                                                                                                                                                                                                                                                                                                <td width="2%" valign="top" align="center" style="color:#414142 ;font-family:arial;vertical-align:top;font-size:8px;line-height:11px; text-align: center;">• </td>
+                                                                                                                                                                                                                                                                                                                                                <td width="98%" valign="middle" align="justify" style="color:#414142 ;font-family:arial;vertical-align:middle;font-size:8px;line-height:11px; text-align: justify;">제품의 이상사례 보고는 <a href="mailto:KOR.AEReporting@pfizer.com?subject=(광고)%20중환자의%20진정제%20선택%20시,%20혈역학적%20안정성을%20중요하게%20고려해야%20하는%20이유에%20대해%20더%20자세히%20알고%20싶으신가요 " style="color: #414142 ;text-decoration: none;cursor: pointer;">KOR.AEReporting@pfizer.com</a>으로 연락주시기 바랍니다.</td>
+                                                                                                                                                                                                                                                                                                                                                </tr>
+
+                                                                                                                                                                                                                                                                                                                                                <tr>
+                                                                                                                                                                                                                                                                                                                                                    <td width="2%" valign="top" align="center" style="color:#414142 ;font-family:arial;vertical-align:top;font-size:8px;line-height:11px; text-align: center;">• </td>
+                                                                                                                                                                                                                                                                                                                                                    <td width="98%" valign="middle" align="justify" style="color:#414142 ;font-family:arial;vertical-align:middle;font-size:8px;line-height:11px; text-align: justify;">제품의 의학정보에 대하여 궁금하신 사항은 화이자의학정보실 홈페이지(<a href="http://www.pfizermedinfo.co.kr?cmp={{Approved_Document_vod__c.CMS_Campaign_Source_Code__c}}" style="color: #414142 ; text-decoration: none;outline: none;border:none;" target="_blank">https://www.pfizermedinfo.co.kr</a>) 또는 전화(TEL:<a href="#" style="color: #414142 ; text-decoration: none;pointer-events:none;cursor:none;">0&zwj;8&zwj;0&zwj;-&zwj;2&zwj;1&zwj;0&zwj;-&zwj;2&zwj;1&zwj;1&zwj;4</a>)로 문의해 주시기 바랍니다. </td>
+                                                                                                                                                                                                                                                                                                                                                    </tr>
+
+                                                                                                                                                                                                                                                                                                                                                    <tr>
+                                                                                                                                                                                                                                                                                                                                                        <td width="2%" valign="top" align="center" style="color:#414142 ;font-family:arial;vertical-align:top;font-size:8px;line-height:11px; text-align: center;">• </td>
+                                                                                                                                                                                                                                                                                                                                                        <td width="98%" valign="middle" align="justify" style="color:#414142 ;font-family:arial;vertical-align:middle;font-size:8px;line-height:11px; text-align: justify;">더 이상 메일 수신을 원치 않으시는 경우 <a href="{{unsubscribe_product_link[,KR_PBG]}}" style="color:#414142 ;font-family:arial;font-size:8px; text-decoration:none;">[수신거부]</a>를 눌러주세요. 개인정보 파기를 원하시는 경우 <a href="mailto:koreaemcm@pfizer.com?subject=(광고)%20중환자의%20진정제%20선택%20시,%20혈역학적%20안정성을%20중요하게%20고려해야%20하는%20이유에%20대해%20더%20자세히%20알고%20싶으신가요?
+                                                                                                                                                                                                                                                                                                                                                            " style="color: #414142 ;text-decoration: none;cursor: pointer;">koreaemcm@pfizer.com</a>로 연락 주시기 바랍니다. </td>
+                                                                                                                                                                                                                                                                                                                                                        </tr>
+                                                                                                                                                                                                                                                                                                                                                        </table>
+                                                                                                                                                                                                                                                                                                                                                        </td>
+                                                                                                                                                                                                                                                                                                                                                        </tr>
+
+
+
+                                                                                                                                                                                                                                                                                                                                                        <tr>
+                                                                                                                                                                                                                                                                                                                                                            <td width="100%" valign="top" align="left" style="text-align:left;padding:5px 40px 10px 40px; ">
+                                                                                                                                                                                                                                                                                                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                                                                                                                                                                                                                                                                                                    <tr>
+                                                                                                                                                                                                                                                                                                                                                                        <td width="2%" valign="top" align="center" style="color:#414142 ;font-family:arial;vertical-align:top;font-size:8px;line-height:11px; text-align: center;">• </td>
+                                                                                                                                                                                                                                                                                                                                                                        <td width="98%" valign="middle" align="left" style="color:#414142 ;font-family:arial;vertical-align:left;font-size:8px;line-height:11px; text-align: left;">Information in this e-mail, which is sent to you with your prior consent, contains confidential information of Pfizer and is intended for your exclusive use. Dissemination, distribution, forwarding or copying of this e-mail is prohibited. If you have received this e-mail in error, please notify us immediately by e-mail (<a href="mailto:koreaemcm@pfizer.com?subject=(광고)%20중환자의%20진정제%20선택%20시,%20혈역학적%20안정성을%20중요하게%20고려해야%20하는%20이유에%20대해%20더%20자세히%20알고%20싶으신가요?
+                                                                                                                                                                                                                                                                                                                                                                            " style="color: #414142 ;text-decoration: none;cursor: pointer;">koreaemcm@pfizer.com</a>) and completely delete or destroy any and all copies of the original message and any attachments. Thank you for your cooperation.
+                                                                                                                                                                                                                                                                                                                                                                              </td>
+                                                                                                                                                                                                                                                                                                                                                                              </tr>
+
+                                                                                                                                                                                                                                                                                                                                                                              <tr>
+                                                                                                                                                                                                                                                                                                                                                                                <td width="2%" valign="top" align="center" style="color:#414142 ;font-family:arial;vertical-align:top;font-size:8px;line-height:11px; text-align: center;">• </td>
+                                                                                                                                                                                                                                                                                                                                                                                <td width="98%" valign="middle" align="left" style="color:#414142 ;font-family:arial;vertical-align:left;font-size:8px;line-height:11px; text-align: left;"> If you wish to report an adverse event, please contact us at <a href="mailto:KOR.AEReporting@pfizer.com?subject=(광고)%20중환자의%20진정제%20선택%20시,%20혈역학적%20안정성을%20중요하게%20고려해야%20하는%20이유에%20대해%20더%20자세히%20알고%20싶으신가요?
+                                                                                                                                                                                                                                                                                                                                                                                    " style="color: #414142 ;text-decoration: none;cursor: pointer;">
+                                                                                                                                                                                                                                                                                                                                                                                    KOR.AEReporting@pfizer.com</a> </td>
+                                                                                                                                                                                                                                                                                                                                                                                    </tr>
+
+                                                                                                                                                                                                                                                                                                                                                                                    <tr>
+                                                                                                                                                                                                                                                                                                                                                                                        <td width="2%" valign="top" align="center" style="color:#414142 ;font-family:arial;vertical-align:top;font-size:8px;line-height:11px; text-align: center;">• </td>
+                                                                                                                                                                                                                                                                                                                                                                                        <td width="98%" valign="middle" align="left" style="color:#414142 ;font-family:arial;vertical-align:left;font-size:8px;line-height:11px; text-align: left;"> If you have a medical inquiry on a Pfizer product, please visit our Medical Information website at <a href="http://www.pfizermedinfo.co.kr?cmp={{Approved_Document_vod__c.CMS_Campaign_Source_Code__c}}" style="color: #414142 ; text-decoration: none;" target="_blank">https://www.pfizermedinfo.co.kr</a> or call us at <a href="#" style="color: #414142 ; text-decoration: none;pointer-events: none;cursor:none;">+&zwj;8&zwj;2&zwj;-&zwj;8&zwj;0&zwj;-&zwj;2&zwj;1&zwj;0&zwj;-&zwj;2&zwj;1&zwj;1&zwj;4</a>. </td>
+                                                                                                                                                                                                                                                                                                                                                                                    </tr>
+
+                                                                                                                                                                                                                                                                                                                                                                                    <tr>
+                                                                                                                                                                                                                                                                                                                                                                                        <td width="2%" valign="top" align="center" style="color:#414142 ;font-family:arial;vertical-align:top;font-size:8px;line-height:11px; text-align: center;">• </td>
+                                                                                                                                                                                                                                                                                                                                                                                        <td width="98%" valign="middle" align="left" style="color:#414142 ;font-family:arial;vertical-align:left;font-size:8px;line-height:11px; text-align: left;"> If you no longer wish to receive email from Pfizer, please click here <a href="{{unsubscribe_product_link[,KR_PBG]}}" style="color:#414142 ;font-family:arial;font-size:8px;line-height:11px; text-decoration:none;">[수신거부]</a>. If you wish to withdraw your privacy consent, please contact us at <a href="mailto:koreaemcm@pfizer.com?subject=(광고)%20중환자의%20진정제%20선택%20시,%20혈역학적%20안정성을%20중요하게%20고려해야%20하는%20이유에%20대해%20더%20자세히%20알고%20싶으신가요?
+                                                                                                                                                                                                                                                                                                                                                                                            " style="color: #414142 ;text-decoration: none;cursor: pointer;">koreaemcm@pfizer.com</a>. </td>
+                                                                                                                                                                                                                                                                                                                                                                                            </tr>
+
+                                                                                                                                                                                                                                                                                                                                                                                            </table>
+                                                                                                                                                                                                                                                                                                                                                                                            </td>
+                                                                                                                                                                                                                                                                                                                                                                                            </tr>
+
+
+                                                                                                                                                                                                                                                                                                                                                                                            <tr>
+                                                                                                                                                                                                                                                                                                                                                                                                <td width="100%" valign="top" align="left" style="width:100%;padding:10px 40px 10px 40px; color:#414142 ; font-size:8px; font-weight: normal; font-family:arial;text-align:left;line-height:10px; vertical-align: top;">
+                                                                                                                                                                                                                                                                                                                                                                                                <table width="100%" align="left" valign="top" cellspacing="0" cellpadding="0" border="0">
+                                                                                                                                                                                                                                                                                                                                                                                                <tr>
+                                                                                                                                                                                                                                                                                                                                                                                                    <td width="50%" valign="top" align="left" class="mobview center" style="color:#414142;font-family:arial;font-size:8px;line-height:11px;padding:2px 0px 0px 0px;vertical-align:top; text-align: left;" >
+                                                                                                                                                                                                                                                                                                                                                                                                        PP-PDX-KOR-0627-14JUN2024
+                                                                                                                                                                                                                                                                                                                                                                                                        </td>
+
+                                                                                                                                                                                                                                                                                                                                                                                                        <td width="50%" valign="top" align="right" class="mobview center" ><a href="#" style="cursor:default;border:none;outline:none;pointer-events:none;"><img src="images/logo.jpg" width="100" alt="logo" style="width:100px;"> </a></td>
+                                                                                                                                                                                                                                                                                                                                                                                                        </tr>
+                                                                                                                                                                                                                                                                                                                                                                                                        </table>
+                                                                                                                                                                                                                                                                                                                                                                                                        </td>
+                                                                                                                                                                                                                                                                                                                                                                                                        </tr>
+
+                                                                                                                                                                                                                                                                                                                                                                                                    </table>
+                                                                                                                                                                                                                                                                                                                                                                                                </td>
+                                                                                                                                                                                                                                                                                                                                                                                                </tr>
+                                                                                                                                                                                                                                                                                                                                                                                                </table>
+                                                                                                                                                                                                                                                                                                                                                                                                </td>
+                                                                                                                                                                                                                                                                                                                                                                                                </tr>
+                                                                                                                                                                                                                                                                                                                                                                                                </table>
+                                                                                                                                                                                                                                                                                                                                                                                                </td>
+                                                                                                                                                                                                                                                                                                                                                                                                </tr>
+                                                                                                                                                                                                                                                                                                                                                                                                </tbody>
+                                                                                                                                                                                                                                                                                                                                                                                                </table>
+                                                                                                                                                                                                                                                                                                                                                                                                </body>
+                                                                                                                                                                                                                                                                                                                                                                                                </html>
+                                                                                                                                                                                                                                                                                                                                                                                                            
+
+
+                                                                                                                                                                                                                                                                                                                                                                            
+
+                                                                                                                                                                                                                                                                                                                                        
+
+                                                                                                                                                                                                                                                                                                                                   
+
+
+                                                                                                                                                                                                                                                            
+                                                                                            
+
+
+                                                                                                                                                                                
+
+
+
+                                                                                                                                                    
+                                                                                          

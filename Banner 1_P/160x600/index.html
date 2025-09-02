@@ -1,0 +1,338 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="ad.size" content="width=160,height=600" />
+	<title>US-94834_SAPHNELO_DTC_Patient_Stories_HTML_Display_Banners_160x600</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			line-height: 10px;
+			font-size: 8px;
+			font-family: Arial;
+		}
+
+		* {
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		img {
+			border: none;
+		}
+
+		#wrapper1 {
+			position: absolute;
+			width: 158px;
+			height: 598px;
+			background: #fff;
+			border: 1px solid #000000;
+			overflow: hidden;
+		}
+
+		#wrapper {
+			position: absolute;
+			width: 158px;
+			height: 598px;
+			background: #fff;
+			border: 1px solid #000000;
+			overflow: hidden;
+			display: none;
+		}
+
+		#blankdiv {
+			width: 160px;
+			height: 600px;
+			position: absolute;
+			top: -1px;
+			left: -1px;
+			background: rgba(255, 255, 255, 0.00);
+			cursor: pointer;
+		}
+
+		#logo {
+			background: url(logo.svg) no-repeat;
+			background-size: contain;
+			width: 144px;
+			height: 46px;
+			position: absolute;
+			top: 9px;
+			left: -1px;
+		}
+
+		#white_bg {
+			background: url(circle_1.png) no-repeat;
+			background-size: contain;
+			width: 160px;
+			height: 515px;
+			position: absolute;
+			top: 82px;
+			left: 0px;
+		}
+
+		#lady_1 {
+			background: url(lady_1.png) no-repeat;
+			background-size: contain;
+			width: 160px;
+			height: 332px;
+			position: absolute;
+			top: 76px;
+			left: 0px;
+		}
+
+		#lady_2 {
+			background: url(lady_2.png) no-repeat;
+			background-size: contain;
+			width: 160px;
+			height: 332px;
+			position: absolute;
+			top: 76px;
+			left: -1px;
+			opacity: 0;
+		}
+
+		#lady_3 {
+			background: url(lady_3.png) no-repeat;
+			background-size: contain;
+			width: 160px;
+			height: 332px;
+			position: absolute;
+			top: 76px;
+			left: -1px;
+			opacity: 0;
+		}
+
+		#blue_bg {
+			background: url(blue-bg.png) no-repeat;
+			background-size: contain;
+			width: 625px;
+			height: 625px;
+			position: absolute;
+			top: 335px;
+			left: -237px;
+		}
+
+		#text_1 {
+			position: absolute;
+			font-family: "Roboto";
+			font-size: 23px;
+			font-weight: 700;
+			top: 388px;
+			line-height: 31px;
+			left: 13px;
+			color: #fff;
+			width: 128px;
+			text-align: center;
+			overflow: hidden;
+			height: 0px;
+		}
+
+		#text_1_1 {
+			position: absolute;
+			font-family: "Roboto";
+			font-size: 23px;
+			font-weight: 700;
+			top: 407px;
+			line-height: 31px;
+			left: 17px;
+			color: #fff;
+			width: 117px;
+			text-align: center;
+			overflow: hidden;
+			height: 0px;
+		}
+
+
+		#text_2 {
+			position: absolute;
+			font-family: "Roboto";
+			font-size: 23px;
+			font-weight: 700;
+			top: 433px;
+			line-height: 31px;
+			left: 9px;
+			color: #fff;
+			width: 138px;
+			text-align: center;
+			overflow: hidden;
+			height: 0px;
+		}
+
+		#text_2_2 {
+			position: absolute;
+			font-family: "Roboto";
+			font-size: 23px;
+			font-weight: 700;
+			top: 461px;
+			line-height: 31px;
+			left: 12px;
+			color: #fff;
+			width: 132px;
+			text-align: center;
+			overflow: hidden;
+			height: 0px;
+		}
+
+		#text_2_3 {
+			position: absolute;
+			font-family: "Roboto";
+			font-size: 23px;
+			font-weight: 700;
+			top: 487px;
+			line-height: 31px;
+			left: 18px;
+			color: #fff;
+			width: 124px;
+			text-align: center;
+			overflow: hidden;
+			height: 0px;
+		}
+
+/*
+		#text_1::before {
+			content: "[";
+			color: #fe00fe;
+			font-size: 23px;
+			position: absolute;
+			left: 10px;
+			top: 4px;
+			line-height: 20px;
+		}
+
+		#text_2_3::after {
+			content: "]";
+			color: #fe00fe;
+			font-size: 23px;
+			position: absolute;
+			right: 16px;
+			top: 6px;
+			line-height: 20px;
+		}
+*/
+
+
+
+		#cta {
+			background: url(cta.png) no-repeat;
+			background-size: contain;
+			width: 148px;
+			height: 48px;
+			position: absolute;
+			top: 507px;
+			left: 5px;
+			transform: scale(0);
+		}
+
+		#cpy_txt {
+			position: absolute;
+			font-family: "Roboto";
+			font-size: 8px;
+			font-weight: 400;
+			top: 220px;
+			line-height: 10px;
+			left: 6px;
+			top: 566px;
+			color: #ffffff;
+			width: 143px;
+			text-align: center;
+		}
+
+
+
+		#exit1 {
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="wrapper1">
+	</div>
+	<div id="wrapper" onmousedown="return false" onmouseover="return false" onmousemove="return false">
+		<div id="logo"></div>
+		<div id="lady_1"></div>
+		<div id="lady_2"></div>
+		<div id="lady_3"></div>
+		<div id="white_bg"></div>
+		<div id="blue_bg"></div>
+		<div id="text_1">
+			Hear real
+		</div>
+
+		<div id="text_1_1">
+			stories
+		</div>
+
+		<div id="text_2">
+			from real
+		</div>
+
+		<div id="text_2_2">
+			SAPHNELO
+		</div>
+
+		<div id="text_2_3">
+			patients 
+		</div>
+
+		<div id="cta"></div>
+		<div id="cpy_txt">
+			©2024 AstraZeneca. All rights reserved. US-94834 Last Updated 11/24
+		</div>
+
+
+
+		<div id="exit1">
+			<div id="blankdiv"></div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+	<script>
+		let video_check = document.getElementById("animation_video");
+		function pageLoadedHandler() {
+			setTimeout(function () { $("#wrapper1").css("display", "none"); }, 500);
+			$("#wrapper").css("display", "block");
+			TweenLite.to([text_1], 0.5, { delay: 0.5, height: 30, top: 369 });
+			TweenLite.to([text_1_1], 0.5, { delay: 0.6, height: 30, top: 396 });
+			TweenLite.to([text_2], 0.5, { delay: 0.7, height: 30, top: 423 });
+			TweenLite.to([text_2_2], 0.5, { delay: 0.8, height: 30, top: 451 });
+			TweenLite.to([text_2_3], 0.5, { delay: 0.9, height: 30, top: 477 });
+			TweenLite.to([cta], 0.5, { delay: 1.5, scale: 1.1 });
+			TweenLite.to([cta], 0.5, { delay: 2, scale: 1 });
+			TweenLite.to([lady_1], 0.5, { delay: 4, opacity: 0 });
+			TweenLite.to([lady_2], 0.5, { delay: 4, opacity: 1 });
+			TweenLite.to([lady_2], 0.5, { delay: 6, opacity: 0 });
+			TweenLite.to([lady_3], 0.5, { delay: 6, opacity: 1 });
+
+		}
+
+
+		var clickTag1 = 'https://www.saphnelo.com/#homelinkID';
+		$("#exit1").bind("click", function () { Enabler.exit(clickTag1); window.open(clickTag1); });
+		window.onload = function () {
+			if (Enabler.isPageLoaded()) {
+				pageLoadedHandler();
+			}
+			else {
+				Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED,
+					pageLoadedHandler);
+			}
+		}
+	</script>
+</body>
+
+</html>
